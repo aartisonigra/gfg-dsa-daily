@@ -10,6 +10,9 @@
 
 | 2025-04-10 | Cycle in Undirected Graph | Medium     | [CycleUndirected.java](2025-04-10_Cycle_Undirected_Graph/CycleUndirected.java) | [GFG Link](https://practice.geeksforgeeks.org/problems/detect-cycle-in-an-undirected-graph/1) |
 
+| 2025-04-08 | Bridge Edge in a Graph | Medium | [BridgeEdge.java](2025-04-08_Bridge_Edge/BridgeEdge.java) | [GFG Link](https://www.geeksforgeeks.org/problems/bridge-edge-in-graph/1) |
+
+
 
 | 2025-04-11 | Topological Sort       | Medium     | [TopoSort.java](2025-04-11_Topological_Sort/TopoSort.java) | [GFG Link](https://practice.geeksforgeeks.org/problems/topological-sort/1) |
 
