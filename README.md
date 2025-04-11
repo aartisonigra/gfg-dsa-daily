@@ -17,3 +17,6 @@
 | 2025-04-11 | Topological Sort       | Medium     | [TopoSort.java](2025-04-11_Topological_Sort/TopoSort.java) | [GFG Link](https://practice.geeksforgeeks.org/problems/topological-sort/1) |
 
 |2025-04-12 | Directed Graph Cycle   |  Medium   | [DirectedGraphs.java](2025-04-12_Directed_Graph/DirectedGraphs.java) | [GFG Link](https://www.geeksforgeeks.org/problems/detect-cycle-in-a-directed-graph/1) |
+
+
+|2025-04-11 | Dijkstra Algorithm |   Medium  |  [dijkstraAlgorithm.java](2025-04-11_Dijkstra_Algorithm.java) | [GFG Link](https://www.geeksforgeeks.org/problems/implementing-dijkstra-set-1-adjacency-matrix/1) |
