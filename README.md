@@ -20,3 +20,5 @@
 
 
 |2025-04-11 | Dijkstra Algorithm |   Medium  |  [dijkstraAlgorithm.java](2025-04-11_Dijkstra_Algorithm.java) | [GFG Link](https://www.geeksforgeeks.org/problems/implementing-dijkstra-set-1-adjacency-matrix/1) |
+
+|2025-04-13 | clone an Undirected Graph | Medium | [cloneanundirected.java](2025-04-13_clone_an_undirected.java) | [GFG Link] (https://www.geeksforgeeks.org/problems/clone-graph/1) | 
