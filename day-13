@@ -1,0 +1,89 @@
+PROBLEAM :
+
+Given an undirected, weighted graph with V vertices numbered from 0 to V-1 and E edges, represented by a 2d array edges[][], where edges[i] = [u, v, w] represents the edge between the nodes u and v having w edge weight.
+Your task is to find the minimum weight cycle in this graph.
+
+Examples:
+
+Input: V = 5, edges[][] = [[0, 1, 2], [1, 2, 2], [1, 3, 1], [1, 4, 1], [0, 4, 3], [2, 3, 4]]
+
+Output: 6
+Explanation: 
+
+Minimum-weighted cycle is  0 → 1 → 4 → 0 with a total weight of 6(2 + 1 + 3)
+Input: V = 5, edges[][] = [[0, 1, 3], [1, 2, 2], [0, 4, 1], [1, 4, 2], [1, 3, 1], [3, 4, 2], [2, 3, 3]]
+
+Output: 5
+Explanation: 
+
+Minimum-weighted cycle is  1 → 3 → 4 → 1 with a total weight of 5(1 + 2 + 2)
+
+  SOLUTION:
+
+  class Solution {
+    public int findMinCycle(int V, int[][] edges) {
+        List<List<int[]>> graph = new ArrayList<>();
+        for (int i = 0; i < V; i++) graph.add(new ArrayList<>());
+
+        for (int[] edge : edges) {
+            int u = edge[0], v = edge[1], w = edge[2];
+            graph.get(u).add(new int[]{v, w});
+            graph.get(v).add(new int[]{u, w});
+        }
+
+        int minCycle = Integer.MAX_VALUE;
+
+        // For every edge, remove it and try to find a path from u to v
+        for (int[] edge : edges) {
+            int u = edge[0], v = edge[1], w = edge[2];
+
+            // Temporarily remove edge (u, v)
+            removeEdge(graph, u, v, w);
+
+            int distance = dijkstra(u, v, V, graph);
+            if (distance != Integer.MAX_VALUE) {
+                minCycle = Math.min(minCycle, distance + w);
+            }
+
+            // Add the edge back
+            graph.get(u).add(new int[]{v, w});
+            graph.get(v).add(new int[]{u, w});
+        }
+
+        return (minCycle == Integer.MAX_VALUE) ? -1 : minCycle;
+    }
+
+    private int dijkstra(int src, int target, int V, List<List<int[]>> graph) {
+        int[] dist = new int[V];
+        Arrays.fill(dist, Integer.MAX_VALUE);
+        dist[src] = 0;
+
+        PriorityQueue<int[]> pq = new PriorityQueue<>(Comparator.comparingInt(a -> a[1]));
+        pq.add(new int[]{src, 0});
+
+        while (!pq.isEmpty()) {
+            int[] curr = pq.poll();
+            int u = curr[0], d = curr[1];
+
+            if (u == target) return d;
+
+            for (int[] neighbor : graph.get(u)) {
+                int v = neighbor[0], w = neighbor[1];
+                if (d + w < dist[v]) {
+                    dist[v] = d + w;
+                    pq.add(new int[]{v, dist[v]});
+                }
+            }
+        }
+        return Integer.MAX_VALUE;
+    }
+
+    private void removeEdge(List<List<int[]>> graph, int u, int v, int w) {
+        graph.get(u).removeIf(pair -> pair[0] == v && pair[1] == w);
+        graph.get(v).removeIf(pair -> pair[0] == u && pair[1] == w);
+    }
+}
+
+
+
+  
