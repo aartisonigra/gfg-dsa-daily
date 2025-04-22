@@ -27,3 +27,5 @@
 |2025-04-14 | Alien Dictionary | Hard | [AlienDictionary.java](2025-04-14_Alien_Dictionary.java) | [GFG Link](https://www.geeksforgeeks.org/problems/alien-dictionary/1) | 
 
 |2025-04-15 | Bellman-Ford Algorithm | Medium | [BellmanFord.java](https://www.geeksforgeeks.org/problems/distance-from-the-source-bellman-ford-algorithm/1)  |
+
+| 2025-04-22 | unique number | Easy | [uniqueNumber.java] | (https://www.geeksforgeeks.org/problems/find-unique-number/1)
