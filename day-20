@@ -1,0 +1,41 @@
+PROBLEAMS:
+
+Given an array of integers arr[] where, every element appears thrice except for one which occurs once.
+Find that element which occurs once.
+
+Examples:
+
+Input: arr[] = [1, 10, 1, 1]
+Output: 10
+Explanation: 10 occurs once in the array while the other element 1 occurs thrice.
+Input: arr[] = [3, 2, 1, 34, 34, 1, 2, 34, 2, 1]
+Output: 3
+Explanation: All elements except 3 occurs thrice in the array.
+
+SOLUTIONS:
+
+
+  class Solution {
+    public int getSingle(int[] arr) {
+        // code here
+        int result = 0;
+        
+        for(int i = 0;i < 32; i++){
+            int sum = 0;
+            int x = (1 << i);
+            
+            for(int j = 0; j < arr.length;j++){
+                if((arr[j] & x) != 0){
+                    sum++;
+                }
+            }
+            
+            if(sum % 3 != 0){
+                result |= x;
+            }
+        }
+        
+        return result;
+        
+    }
+}
