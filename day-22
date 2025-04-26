@@ -1,0 +1,53 @@
+PROBLEMS:
+
+You are given a binary tree, and the task is to determine whether it satisfies the properties of a max-heap.
+
+A binary tree is considered a max-heap if it satisfies the following conditions:
+
+Completeness: Every level of the tree, except possibly the last, is completely filled, and all nodes are as far left as possible.
+Max-Heap Property: The value of each node is greater than or equal to the values of its children.
+Examples:
+
+Input: root[] = [97, 46, 37, 12, 3, 7, 31, 6, 9]
+ 
+Output: true
+Explanation: The tree is complete and satisfies the max-heap property.
+Input: root[] = [97, 46, 37, 12, 3, 7, 31, N, 2, 4] 
+ 
+Output: false
+Explanation: The tree is not complete and does not follow the Max-Heap Property, hence it is not a max-heap.
+
+
+SOLUTIONS:
+
+
+class Solution {
+    // Step 1: Count total nodes
+    int countNodes(Node root) {
+        if (root == null) return 0;
+        return 1 + countNodes(root.left) + countNodes(root.right);
+    }
+    
+    // Step 2: Check completeness and max-heap property
+    boolean isHeapUtil(Node root, int index, int nodeCount) {
+        if (root == null) return true;
+        
+        // If index assigned to current node is more than total nodes => not complete
+        if (index >= nodeCount) return false;
+        
+        // Check heap property
+        if (root.left != null && root.data < root.left.data) return false;
+        if (root.right != null && root.data < root.right.data) return false;
+        
+        // Check recursively for left and right subtree
+        return isHeapUtil(root.left, 2 * index + 1, nodeCount) && 
+               isHeapUtil(root.right, 2 * index + 2, nodeCount);
+    }
+    
+    // Main function
+    boolean isHeap(Node tree) {
+        int nodeCount = countNodes(tree);
+        return isHeapUtil(tree, 0, nodeCount);
+    }
+}
+
