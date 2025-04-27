@@ -1,0 +1,74 @@
+PROBLEMAS:
+
+Given two numbers as strings s1 and s2. Calculate their Product.
+Note: The numbers can be negative and You are not allowed to use any built-in function or convert the strings to integers. There can be zeros in the begining of the numbers. You don't need to specify '+' sign in the begining of positive numbers.
+
+Examples:
+
+Input: s1 = "0033", s2 = "2"
+Output: "66"
+Explanation: 33 * 2 = 66
+Input: s1 = "11", s2 = "23"
+Output: "253"
+Explanation: 11 * 23  = 253
+Input: s1 = "123", s2 = "0"
+Output: "0"
+Explanation: Anything multiplied by 0 is equal to 0.
+
+
+SOLUTIONS:
+
+
+
+class Solution {
+    public String multiplyStrings(String s1, String s2) {
+        // Step 1: Check for negative sign
+        boolean isNegative = false;
+        if (s1.startsWith("-")) {
+            isNegative = !isNegative;
+            s1 = s1.substring(1);
+        }
+        if (s2.startsWith("-")) {
+            isNegative = !isNegative;
+            s2 = s2.substring(1);
+        }
+
+        // Step 2: Remove leading zeros
+        s1 = trimZeros(s1);
+        s2 = trimZeros(s2);
+
+        // Step 3: If any number is zero
+        if (s1.equals("0") || s2.equals("0")) return "0";
+
+        // Step 4: Create result array
+        int[] res = new int[s1.length() + s2.length()];
+
+        // Step 5: Multiply each digit
+        for (int i = s1.length() - 1; i >= 0; i--) {
+            for (int j = s2.length() - 1; j >= 0; j--) {
+                int mul = (s1.charAt(i) - '0') * (s2.charAt(j) - '0');
+                int sum = mul + res[i + j + 1];
+
+                res[i + j + 1] = sum % 10;     // current position
+                res[i + j] += sum / 10;         // carry to previous
+            }
+        }
+
+        // Step 6: Convert array to string
+        StringBuilder sb = new StringBuilder();
+        for (int num : res) {
+            if (!(sb.length() == 0 && num == 0)) {
+                sb.append(num);
+            }
+        }
+
+        return isNegative ? "-" + sb.toString() : sb.toString();
+    }
+
+    // Helper: Remove leading zeros
+    private String trimZeros(String s) {
+        int i = 0;
+        while (i < s.length() && s.charAt(i) == '0') i++;
+        return i == s.length() ? "0" : s.substring(i);
+    }
+}
