@@ -1,0 +1,49 @@
+PROBLEMAS:
+
+Given a string str, your task is to find the length of the smallest window that contains all the characters of the given string at least once.
+
+Example:
+
+Input: str = "aabcbcdbca"
+Output: 4
+Explanation: Sub-String "dbca" has the smallest length that contains all the characters of str.
+Input: str = "aaab"
+Output: 2
+Explanation: Sub-String "ab" has the smallest length that contains all the characters of str.
+Input: str = "geeksforgeeks"
+Output: 8
+Explanation: There are multiple substring with smallest length that contains all characters of str, "geeksfor" and "forgeeks". 
+
+
+SOLTUIONS:
+
+class Solution {
+    public int findSubString(String str) {
+        int n = str.length();
+        Set<Character> uniqueChars = new HashSet<>();
+        for (char ch : str.toCharArray()) uniqueChars.add(ch);
+        int totalUnique = uniqueChars.size();
+
+        Map<Character, Integer> freq = new HashMap<>();
+        int minLen = n + 1, count = 0;
+        int start = 0;
+
+        for (int end = 0; end < n; end++) {
+            char endChar = str.charAt(end);
+            freq.put(endChar, freq.getOrDefault(endChar, 0) + 1);
+            
+            if (freq.get(endChar) == 1) count++; // new unique char
+
+            while (count == totalUnique) {
+                minLen = Math.min(minLen, end - start + 1);
+
+                char startChar = str.charAt(start);
+                freq.put(startChar, freq.get(startChar) - 1);
+                if (freq.get(startChar) == 0) count--; // lost a unique char
+                start++;
+            }
+        }
+        return minLen;
+    }
+}
+
