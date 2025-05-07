@@ -28,4 +28,7 @@
 
 |2025-04-15 | Bellman-Ford Algorithm | Medium | [BellmanFord.java](https://www.geeksforgeeks.org/problems/distance-from-the-source-bellman-ford-algorithm/1)  |
 
-| 2025-04-22 | unique number | Easy | [uniqueNumber.java] | (https://www.geeksforgeeks.org/problems/find-unique-number/1)
+| 2025-04-22 | unique number | Easy | [uniqueNumber.java] | 
+(https://www.geeksforgeeks.org/problems/find-unique-number/1)
+
+|2025-05-07 | root to leaf paths | Medium |[Roottoleafpaths.java] | (https://www.geeksforgeeks.org/problems/root-to-leaf-paths/1)
