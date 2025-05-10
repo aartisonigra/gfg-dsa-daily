@@ -1,0 +1,46 @@
+Given an array arr[] and an integer k, the task is to find the length of longest subarray in which the count of elements greater than k is more than the count of elements less than or equal to k.
+
+Examples:
+
+Input: arr[] = [1, 2, 3, 4, 1], k = 2
+Output: 3
+Explanation: The subarray [2, 3, 4] or [3, 4, 1] satisfy the given condition, and there is no subarray of length 4 or 5 which will hold the given condition, so the answer is 3.
+Input: arr[] = [6, 5, 3, 4], k = 2
+Output: 4
+Explanation: In the subarray [6, 5, 3, 4], there are 4 elements > 2 and 0 elements <= 2, so it is the longest subarray.
+
+
+SOLTUIONS:
+
+// hashmap use krke sum ko solve krne kiliye hmne esaily subarry ki length me niklko sakte he
+
+class Solution {
+    static int longestSubarray(int[] arr, int k) {
+        int sum = 0, maxLen = 0;
+//sum: cumulative sum ko track krega  elements ko greater krne kiliye k laiyegeya or less then or equal to k aayega
+// maxlen : maximum length of the subarray ko track krega orcondition setisfy krega
+        Map<Integer, Integer> map = new HashMap<>();
+        map.put(0, -1); // For subarrays starting from index 0
+
+        for (int i = 0; i < arr.length; i++) {
+            sum += (arr[i] > k) ? 1 : -1;
+        
+// (arr[i] > k) ? 1 : -1; ae condition chack krega arr[i] greater then k he ya nahi
+
+            // If sum > 0, entire array from 0 to i is valid
+            if (sum > 0) { //current subarray me greatre elements jayaga he ki nhai vo cheack krega maxlen upadtea krega 
+                maxLen = i + 1;//length i + 1 hoga 
+            } else {
+                // If (sum - 1) was seen before, then this subarray has more 1s than -1s
+                if (map.containsKey(sum - 1)) { // sum - 1 store kiya gya tha ishka mtlb he ki valid subarray he 
+                    maxLen = Math.max(maxLen, i - map.get(sum - 1)); // maxlen updtae krrahahe subaaray ki length track krtahe
+                }
+            }
+
+            // Store the earliest index for each prefix sum
+            map.putIfAbsent(sum, i);
+        }
+
+        return maxLen;
+    }
+}
