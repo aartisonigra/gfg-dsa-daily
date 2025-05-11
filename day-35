@@ -1,0 +1,62 @@
+PROBELMAS:
+
+Given an array arr[] of size n, find the sum of the K-th largest sum among all contiguous subarrays. In other words, identify the K-th largest sum from all possible subarrays and return it.
+
+Examples:
+
+Input: arr[] = [3, 2, 1], k = 2 
+Output: 5
+Explanation: The different subarray sums we can get from the array are = [6, 5, 3, 2, 1]. Where 5 is the 2nd largest.
+Input: arr[] = [2, 6, 4, 1], k = 3
+Output: 11
+Explanation: The different subarray sums we can get from the arrayare = [13, 12, 11, 10, 8, 6, 5, 4, 2, 1]. Where 11 is the 3rd largest.
+
+
+SOLUTIONs:
+
+class Solution {
+  //solutions class ka object he
+  
+    public static int kthLargest(int[] arr, int k) {
+  //kthLargest ka aek arr[] or aek number k leta he return 
+        List<Integer> subSums = new ArrayList<>();
+        int n = arr.length;
+      //subsums ka list subarray sums ko store krtahe  n = array ka size
+
+        // Step 1: Subarray sums निकालना
+        for (int i = 0; i < n; i++) {
+            int sum = 0;
+            for (int j = i; j < n; j++) {
+                sum += arr[j];
+                subSums.add(sum);
+            }
+        }
+      //outer loop (I) subarray starting index hoti he 
+      //inner loop (j) subaaray ending index hoti he
+      //sum me i or j elements jod ata he subaarray medalta he
+
+      //ex:[3] -> sum = 3
+      //[3,2] -> sum = 5
+      //[3,2,1] -> sum = 6
+    
+
+        // Step 2: Max Heap में डालो
+        PriorityQueue<Integer> maxHeap = new PriorityQueue<>(Collections.reverseOrder());
+        maxHeap.addAll(subSums);
+      //subarray sums maxheap me dalta he
+      //collections.reverseorder() - elements sbshe upar he
+
+        // Step 3: k-th सबसे बड़ा sum निकालो
+        int kth = 0;
+        for (int i = 0; i < k; i++) {
+            kth = maxHeap.poll();
+        }
+      //heap k ke ko bar nikalti he
+      //har bar sum nikta he
+      // k-th bar nikalge vhi hmara answer he
+
+        return kth;
+
+      //ae k ko return krega
+    }
+}
