@@ -1,0 +1,35 @@
+problems:
+
+Given a string s consisting of lowercase characters, the task is to find the count of all substrings that start and end with the same character.
+
+Examples:
+
+Input: s = "abcab"
+Output: 7
+Explanation: There are 7 substrings where the first and last characters are the same: "a", "abca", "b", "bcab", "c", "a", and "b"
+Input: s = "aba"
+Output: 4
+Explanation: There are 4 substrings where the first and last characters are the same: "a", "aba", "b", "a"
+
+
+SOLTUIONS:
+
+class Solution {
+    public int countSubstring(String s) {
+      //clas  solutions he countsubstring ka aek method jo string s ko input leta he output ka aek integer deta he
+        // code here
+      HashMap<Character, Integer> map = new HashMap<>();
+      //hashmap bna he har character ki frequency atore duya he
+        for(char ch : s.toCharArray()) {
+            map.put(ch,map.getOrDefault(ch,0) + 1);
+        }
+      //s.tocharaaray()-> string ko characters ke array me bdldeta he
+        
+        int count = 0;
+        for(int freq : map.values()){
+            count += (freq * (freq + 1)) / 2;
+        }
+        return count;
+        
+    }
+}
