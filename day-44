@@ -1,0 +1,44 @@
+PROBLEMAs:
+
+Given n dice each with m faces. Find the number of ways to get sum x which is the summation of values on each face when all the dice are thrown.
+
+Example:
+
+Input: m = 6, n = 3, x = 12
+Output: 25
+Explanation: There are 25 total ways to get the Sum 12 using 3 dices with faces from 1 to 6.
+Input: m = 2, n = 3, x = 6
+Output: 1
+Explanation: There is only 1 way to get the Sum 6 using 3 dices with faces from 1 to 2. All the dices will have to land on 2.
+
+  OUTPUT
+  class Solution {
+    static int noOfWays(int m, int n, int x) {
+        // dp[i][j] = number of ways to get sum j using i dice
+        int[][] dp = new int[n + 1][x + 1];
+
+        // Base Case: 0 dice to get sum 0 -> 1 way (do nothing)
+        dp[0][0] = 1;
+
+        // i = number of dice
+        for (int i = 1; i <= n; i++) {
+            // j = required sum
+            for (int j = 1; j <= x; j++) {
+                // k = face value from 1 to m
+                for (int k = 1; k <= m; k++) {
+                    if (j - k >= 0) {
+                        dp[i][j] += dp[i - 1][j - k];
+                    }
+                }
+            }
+        }
+
+        return dp[n][x];
+    }
+
+    // Main function for testing
+    public static void main(String[] args) {
+        System.out.println(noOfWays(6, 3, 12)); // Output: 25
+        System.out.println(noOfWays(2, 3, 6));  // Output: 1
+    }
+}
