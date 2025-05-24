@@ -1,0 +1,40 @@
+probleams:
+
+Sum of all substrings of a number
+Difficulty: MediumAccuracy: 38.11%Submissions: 60K+Points: 4
+Given an integer s represented as a string, the task is to get the sum of all possible sub-strings of this string.
+
+Note: The number may have leading zeros.
+It is guaranteed that the total sum will fit within a 32-bit signed integer.
+
+Examples:
+
+Input: s = "6759"
+Output: 8421
+Explanation:
+Sum = 6 + 7 + 5 + 9 + 67 + 75 + 59 + 675 + 759 + 6759 = 8421
+Input: s = "421"
+Output: 491
+Explanation: 
+Sum = 4 + 2 + 1 + 42 + 21 + 421 = 491
+
+SOLUTIONS:
+
+class Solution {
+    public static int sumSubstrings(String s) {
+        // code here
+        int n = s.length();
+        long total = 0;
+        long prev = 0;
+        
+        for(int i = 0;i < n;i++){
+            int digit = s.charAt(i) - '0';
+            prev = prev * 10 + digit * (i + 1);
+            total += prev;
+//prev * 10 mtlb pichle string me substring sums she 10 she multiplay krte he taki digits ka position left shift ho jaiye
+//digit * (i + 1)digit she sru hone wali substaring ki contribute jodta he
+        }
+        
+        return (int ) total;
+    }
+}
