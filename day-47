@@ -1,0 +1,56 @@
+PROBLEMAs:
+
+Given an array arr[], return true if there is a triplet (a, b, c) from the array (where a, b, and c are on different indexes) that satisfies a2 + b2 = c2, otherwise return false.
+
+Examples:
+
+Input: arr[] = [3, 2, 4, 6, 5]
+Output: true
+Explanation: a=3, b=4, and c=5 forms a pythagorean triplet.
+Input: arr[] = [3, 8, 5]
+Output: false
+Explanation: No such triplet possible.
+Input: arr[] = [1, 1, 1]
+Output: false
+
+
+SOLTUIONS:
+
+import java.util.HashSet;
+import java.util.Set;
+
+class Solution {
+    boolean pythagoreanTriplet(int[] arr) {
+        int n = arr.length;
+        
+        // Store all elements in a set for fast lookup
+        Set<Integer> set = new HashSet<>();
+        for (int val : arr) {
+            set.add(val);
+        }
+
+        // Try all pairs (a, b)
+        for (int i = 0; i < n; i++) {
+            for (int j = i+1; j < n; j++) {
+                int a = arr[i];
+                int b = arr[j];
+                int sumSq = a*a + b*b;
+
+                // Get square root of sum
+                int c = (int)Math.sqrt(sumSq);
+
+                // Check if it's a perfect square and the value exists in the array
+                if (c * c == sumSq && set.contains(c)) {
+                    // Optional: to make sure c is not same as a or b if needed
+                    if (c != a && c != b) {
+                        return true;
+                    }
+                    // Or if duplicates allowed, you can skip above condition
+                    return true;
+                }
+            }
+        }
+
+        return false;
+    }
+}
