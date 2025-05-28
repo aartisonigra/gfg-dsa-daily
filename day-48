@@ -1,0 +1,46 @@
+Given an n x m binary matrix mat[][] containing only 0s and 1s, determine if there exists a rectangle within the matrix such that all four corners of the rectangle are 1. If such a rectangle exists, return true; otherwise, return false.
+
+Example:
+
+Input: mat[][] =
+[[1, 0, 0, 1, 0],
+[0, 0, 1, 0, 1],
+[0, 0, 0, 1, 0], 
+[1, 0, 1, 0, 1]] 
+Output: true
+Explanation: Valid corners are at index (1,2), (1,4), (3,2), (3,4) 
+Input: mat[][] =
+[[0, 0, 0],
+[0, 0, 0],
+[0, 0, 0]]
+Output: false
+Explanation: There are no valid corners.
+
+SOLTUIOSNs:
+
+class Solution {
+    public boolean ValidCorner(int mat[][]) {
+        // Code here
+        int rows = mat.length;
+        if(rows == 0)return false;
+        int cols = mat[0].length;
+        
+        for(int c1 = 0;c1 < cols;c1++){
+            for(int c2 = c1 + 1;c2 < cols;c2++){
+                int count = 0;
+                
+                for(int r = 0;r < rows;r++){
+                    if(mat[r][c1] == 1 && mat[r][c2] == 1){
+                        count++;
+                        if(count >= 2){
+                            return true;
+                        }
+                    }
+                }
+            }
+        }
+        return false;
+        
+        
+    }
+}
