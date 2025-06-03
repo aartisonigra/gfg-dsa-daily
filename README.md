@@ -11,3 +11,5 @@ https://www.geeksforgeeks.org/problems/minimum-deletitions1648/1
 |2025-06-01 | (https://www.geeksforgeeks.org/problems/count-pairs-sum-in-matrices4332/1)
 
 |2025-06-02 | (https://www.geeksforgeeks.org/problems/unique-paths-in-a-grid--170647/1)
+
+|2025-06-03 | (https://www.geeksforgeeks.org/problems/count-number-of-substrings4528/1)
