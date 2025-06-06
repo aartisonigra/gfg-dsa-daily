@@ -17,3 +17,5 @@ https://www.geeksforgeeks.org/problems/minimum-deletitions1648/1
 |2025-06-04 | (https://www.geeksforgeeks.org/problems/lcs-of-three-strings0028/1)
 
 |2025-06-05 | (https://www.geeksforgeeks.org/problems/count-the-paths4332/1)
+
+|2025-06-06 | (https://www.geeksforgeeks.org/problems/search-pattern-rabin-karp-algorithm--141631/1)
