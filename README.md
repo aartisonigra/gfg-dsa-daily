@@ -27,3 +27,5 @@ https://www.geeksforgeeks.org/problems/minimum-deletitions1648/1
 |2025-06-09 | (http://geeksforgeeks.org/problems/check-whether-bst-contains-dead-end/1)
 
 |2025-06-10 | (https://www.geeksforgeeks.org/problems/exactly-one-swap--170637/1)
+
+|2025-06-11 | (https://www.geeksforgeeks.org/problems/remove-the-balls--170647/1)
