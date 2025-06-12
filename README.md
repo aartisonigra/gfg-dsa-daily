@@ -29,3 +29,5 @@ https://www.geeksforgeeks.org/problems/minimum-deletitions1648/1
 |2025-06-10 | (https://www.geeksforgeeks.org/problems/exactly-one-swap--170637/1)
 
 |2025-06-11 | (https://www.geeksforgeeks.org/problems/remove-the-balls--170647/1)
+
+|2025-06-12 | (https://www.geeksforgeeks.org/problems/k-closest-elements3619/1)
