@@ -31,3 +31,5 @@ https://www.geeksforgeeks.org/problems/minimum-deletitions1648/1
 |2025-06-11 | (https://www.geeksforgeeks.org/problems/remove-the-balls--170647/1)
 
 |2025-06-12 | (https://www.geeksforgeeks.org/problems/k-closest-elements3619/1)
+
+|2025-06-13 | (https://www.geeksforgeeks.org/problems/koko-eating-bananas/1)
