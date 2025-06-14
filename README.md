@@ -33,3 +33,5 @@ https://www.geeksforgeeks.org/problems/minimum-deletitions1648/1
 |2025-06-12 | (https://www.geeksforgeeks.org/problems/k-closest-elements3619/1)
 
 |2025-06-13 | (https://www.geeksforgeeks.org/problems/koko-eating-bananas/1)
+
+|2025-06-14 | (https://www.geeksforgeeks.org/problems/symmetric-tree/1)
