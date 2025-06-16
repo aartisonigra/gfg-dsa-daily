@@ -35,3 +35,5 @@ https://www.geeksforgeeks.org/problems/minimum-deletitions1648/1
 |2025-06-13 | (https://www.geeksforgeeks.org/problems/koko-eating-bananas/1)
 
 |2025-06-14 | (https://www.geeksforgeeks.org/problems/symmetric-tree/1)
+
+|2025-06-16 | (https://www.geeksforgeeks.org/problems/equalize-the-towers2804/1)
