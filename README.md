@@ -39,3 +39,5 @@ https://www.geeksforgeeks.org/problems/minimum-deletitions1648/1
 |2025-06-16 | (https://www.geeksforgeeks.org/problems/equalize-the-towers2804/1)
 
 |2025-96-19 | (https://www.geeksforgeeks.org/problems/case-specific-sorting-of-strings4845/1)
+
+|2025-07-02 | (https://www.geeksforgeeks.org/problems/fruit-into-baskets-1663137462/1)
