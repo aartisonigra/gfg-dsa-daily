@@ -41,3 +41,5 @@ https://www.geeksforgeeks.org/problems/minimum-deletitions1648/1
 |2025-96-19 | (https://www.geeksforgeeks.org/problems/case-specific-sorting-of-strings4845/1)
 
 |2025-07-02 | (https://www.geeksforgeeks.org/problems/fruit-into-baskets-1663137462/1)
+
+|2025-07-03 | (https://www.geeksforgeeks.org/problems/longest-k-unique-characters-substring0853/1)
