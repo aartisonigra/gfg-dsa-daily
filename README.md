@@ -47,3 +47,5 @@ https://www.geeksforgeeks.org/problems/minimum-deletitions1648/1
 |2025-07-04 | (https://www.geeksforgeeks.org/problems/subarrays-with-at-most-k-distinct-integers/1)
 
 |2025-07-05 | (https://www.geeksforgeeks.org/problems/max-sum-in-sub-arrays0824/1)
+
+|2025-07-07 | (https://www.geeksforgeeks.org/problems/next-greater-element/1)
