@@ -49,3 +49,5 @@ https://www.geeksforgeeks.org/problems/minimum-deletitions1648/1
 |2025-07-05 | (https://www.geeksforgeeks.org/problems/max-sum-in-sub-arrays0824/1)
 
 |2025-07-07 | (https://www.geeksforgeeks.org/problems/next-greater-element/1)
+
+|2025-07-08 | (https://www.geeksforgeeks.org/problems/next-element-with-greater-frequency--170637/1)
