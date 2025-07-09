@@ -51,3 +51,5 @@ https://www.geeksforgeeks.org/problems/minimum-deletitions1648/1
 |2025-07-07 | (https://www.geeksforgeeks.org/problems/next-greater-element/1)
 
 |2025-07-08 | (https://www.geeksforgeeks.org/problems/next-element-with-greater-frequency--170637/1)
+
+|2025-07-09 | (https://www.geeksforgeeks.org/problems/sum-of-subarray-minimum/1)
