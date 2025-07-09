@@ -1,0 +1,58 @@
+Given an array arr[] of positive integers, find the total sum of the minimum elements of every possible subarrays.
+
+Note: It is guaranteed that the total sum will fit within a 32-bit unsigned integer.
+
+Examples:
+
+Input: arr[] = [3, 1, 2, 4]
+Output: 17
+Explanation: Subarrays are [3], [1], [2], [4], [3, 1], [1, 2], [2, 4], [3, 1, 2], [1, 2, 4], [3, 1, 2, 4]. Minimums are 3, 1, 2, 4, 1, 1, 2, 1, 1, 1. Sum of all these is 17.
+Input: arr[] = [71, 55, 82, 55]
+Output: 593
+Explanation: The sum of the minimum of all the subarrays is 593.
+Constraints:
+1 ≤ arr.size() ≤ 3*104
+1 ≤ arr[i] ≤ 103
+
+solutions:
+
+class Solution {
+    public int sumSubMins(int[] arr) {
+        int MOD = 1000000007;
+        int n = arr.length;
+        int[] left = new int[n];
+        int[] right = new int[n];
+        Stack<Integer> stack = new Stack<>();
+
+        // Calculate left: previous less
+        for (int i = 0; i < n; i++) {
+            int count = 1;
+            while (!stack.isEmpty() && arr[stack.peek()] > arr[i]) {
+                count += left[stack.pop()];
+            }
+            left[i] = count;
+            stack.push(i);
+        }
+
+        stack.clear();
+
+        // Calculate right: next less or equal
+        for (int i = n - 1; i >= 0; i--) {
+            int count = 1;
+            while (!stack.isEmpty() && arr[stack.peek()] >= arr[i]) {
+                count += right[stack.pop()];
+            }
+            right[i] = count;
+            stack.push(i);
+        }
+
+        // Final sum
+        long total = 0;
+        for (int i = 0; i < n; i++) {
+            total = (total + (long) arr[i] * left[i] * right[i]) % MOD;
+        }
+
+        return (int) total;
+    }
+}
+
