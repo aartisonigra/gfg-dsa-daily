@@ -1,0 +1,76 @@
+Given an array of strings words[]. Find the longest string in words[] such that every prefix of it is also present in the array words[]. 
+
+Note: If multiple strings have the same maximum length, return the lexicographically smallest one.
+
+Examples:
+
+Input: words[] = ["p", "pr", "pro", "probl", "problem", "pros", "process", "processor"]
+Output: pros
+Explanation: "pros" is the longest word with all prefixes ("p", "pr", "pro", "pros") present in the array words[].
+Input: words[] = ["ab", "a", "abc", "abd"]
+Output: abc
+Explanation: Both "abc" and "abd" has all the prefixes in words[]. Since, "abc" is lexicographically smaller than "abd", so the output is "abc".
+
+
+
+  soltuions:
+
+import java.util.*;
+
+class TrieNode {
+    TrieNode[] children = new TrieNode[26];
+    boolean isEnd = false;
+}
+
+class Trie {
+    TrieNode root = new TrieNode();
+
+    // Insert word into Trie
+    void insert(String word) {
+        TrieNode curr = root;
+        for (char ch : word.toCharArray()) {
+            int idx = ch - 'a';
+            if (curr.children[idx] == null) {
+                curr.children[idx] = new TrieNode();
+            }
+            curr = curr.children[idx];
+        }
+        curr.isEnd = true;
+    }
+
+    // Check if all prefixes of word exist in Trie
+    boolean allPrefixesExist(String word) {
+        TrieNode curr = root;
+        for (char ch : word.toCharArray()) {
+            int idx = ch - 'a';
+            curr = curr.children[idx];
+            if (curr == null || !curr.isEnd) return false;
+        }
+        return true;
+    }
+}
+
+class Solution {
+    public String longestString(String[] words) {
+        Trie trie = new Trie();
+
+        // Step 1: Insert all words into Trie
+        for (String word : words) {
+            trie.insert(word);
+        }
+
+        String result = "";
+        Arrays.sort(words); // Lexicographical order
+
+        // Step 2: Check for each word if all prefixes exist
+        for (String word : words) {
+            if (trie.allPrefixesExist(word)) {
+                if (word.length() > result.length()) {
+                    result = word;
+                }
+            }
+        }
+
+        return result;
+    }
+}
