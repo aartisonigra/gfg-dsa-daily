@@ -1,0 +1,56 @@
+Given a gold mine called mat[][]. Each field in this mine contains a positive integer which is the amount of gold in tons. Initially, the miner can start from any row in the first column. From a given cell, the miner can move -
+
+to the cell diagonally up towards the right
+to the right
+to the cell diagonally down towards the right
+Find out the maximum amount of gold that he can collect until he can no longer move.
+
+Examples:
+
+Input: mat[][] = [[1, 3, 3], [2, 1, 4], [0, 6, 4]]
+Output: 12
+Explaination: The path is (1, 0) -> (2, 1) -> (2, 2). Total gold collected is 2 + 6 + 4 = 12.
+Input: mat[][] = [[1, 3, 1, 5], [2, 2, 4, 1], [5, 0, 2, 3], [0, 6, 1, 2]]
+Output: 16
+Explaination: The path is (2, 0) -> (3, 1) -> (2, 2) -> (2, 3) or (2, 0) -> (1, 1) -> (1, 2) -> (0, 3). 
+Total gold collected is (5 + 6 + 2 + 3) or (5 + 2 + 4 + 5) = 16.
+Input: mat[][] = [[1, 3, 3], [2, 1, 4], [0, 7, 5]]
+Output: 14
+Explaination: The path is (1,0) -> (2,1) -> (2,2). Total gold collected is 2 + 7 + 5 = 14.
+
+
+  SOlutions;
+
+class Solution {
+    public int maxGold(int[][] mat) {
+        int n = mat.length;        // rows
+        int m = mat[0].length;     // columns
+
+        int[][] dp = new int[n][m];
+
+        // Traverse columns from last to first
+        for (int col = m - 1; col >= 0; col--) {
+            for (int row = 0; row < n; row++) {
+
+                // If last column, just take the cell value
+                if (col == m - 1) {
+                    dp[row][col] = mat[row][col];
+                } else {
+                    int right = dp[row][col + 1]; // move right
+                    int rightUp = (row > 0) ? dp[row - 1][col + 1] : 0; // move right-up
+                    int rightDown = (row < n - 1) ? dp[row + 1][col + 1] : 0; // move right-down
+
+                    dp[row][col] = mat[row][col] + Math.max(right, Math.max(rightUp, rightDown));
+                }
+            }
+        }
+
+        // Find the max value in first column
+        int maxGold = 0;
+        for (int i = 0; i < n; i++) {
+            maxGold = Math.max(maxGold, dp[i][0]);
+        }
+
+        return maxGold;
+    }
+}
