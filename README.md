@@ -57,3 +57,5 @@ https://www.geeksforgeeks.org/problems/minimum-deletitions1648/1
 |2025-07-10 | (https://www.geeksforgeeks.org/problems/find-the-longest-string--170645/1)
 
 |2025-07-11 | (https://www.geeksforgeeks.org/problems/trail-of-ones3242/1)
+
+|2025-07-12 | (https://www.geeksforgeeks.org/problems/gold-mine-problem2608/1)
