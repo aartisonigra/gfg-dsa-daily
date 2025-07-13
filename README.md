@@ -59,3 +59,5 @@ https://www.geeksforgeeks.org/problems/minimum-deletitions1648/1
 |2025-07-11 | (https://www.geeksforgeeks.org/problems/trail-of-ones3242/1)
 
 |2025-07-12 | (https://www.geeksforgeeks.org/problems/gold-mine-problem2608/1)
+
+|2025-07-13 | (https://www.geeksforgeeks.org/problems/maximum-sum-of-elements-not-part-of-lis/1)
