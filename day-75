@@ -1,0 +1,60 @@
+You are given a binary string s consisting only of characters '0' and '1'. Your task is to split this string into the minimum number of non-empty substrings such that:
+
+Each substring represents a power of 5 in decimal (e.g., 1, 5, 25, 125, ...).
+No substring should have leading zeros.
+Return the minimum number of such pieces the string can be divided into.
+Note: If it is not possible to split the string in this way, return -1.
+
+Examples:
+
+Input: s = "101101101"
+Output: 3
+Explanation: The string can be split into three substrings: "101", "101", and "101", each of which is a power of 5 with no leading zeros.
+Input: s = "1111101"
+Output: 1
+Explanation: The string can be split into one binary string "1111101" which is 125 in decimal and a power of 5 with no leading zeros.
+Input: s = "00000"
+Output: -1
+Explanation: There is no substring that can be split into power of 5.
+
+
+SOLUTIONS:
+
+import java.util.*;
+
+class Solution {
+    public int cuts(String s) {
+        int n = s.length();
+        Set<String> powerOf5 = new HashSet<>();
+
+        // Step 1: Precompute binary representations of powers of 5 up to length of s
+        for (int i = 0; i < 32; i++) {
+            String bin = Integer.toBinaryString((int)Math.pow(5, i));
+            if (bin.length() > s.length()) break;
+            powerOf5.add(bin);
+        }
+
+        // Step 2: DP array
+        int[] dp = new int[n + 1];
+        Arrays.fill(dp, Integer.MAX_VALUE);
+        dp[0] = 0;  // base case: empty string
+
+        // Step 3: Fill DP
+        for (int i = 1; i <= n; i++) {
+            for (int j = i - 1; j >= 0; j--) {
+                String sub = s.substring(j, i);
+                if (isValid(sub, powerOf5)) {
+                    if (dp[j] != Integer.MAX_VALUE)
+                        dp[i] = Math.min(dp[i], dp[j] + 1);
+                }
+            }
+        }
+
+        return dp[n] == Integer.MAX_VALUE ? -1 : dp[n];
+    }
+
+    // Step 4: Check for validity (no leading zero & in power set)
+    private boolean isValid(String s, Set<String> powerOf5) {
+        return !s.startsWith("0") && powerOf5.contains(s);
+    }
+}
