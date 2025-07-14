@@ -61,3 +61,5 @@ https://www.geeksforgeeks.org/problems/minimum-deletitions1648/1
 |2025-07-12 | (https://www.geeksforgeeks.org/problems/gold-mine-problem2608/1)
 
 |2025-07-13 | (https://www.geeksforgeeks.org/problems/maximum-sum-of-elements-not-part-of-lis/1)
+
+|2025-07-14 | (https://www.geeksforgeeks.org/problems/cutting-binary-string1342/1)
