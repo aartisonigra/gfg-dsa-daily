@@ -63,3 +63,5 @@ https://www.geeksforgeeks.org/problems/minimum-deletitions1648/1
 |2025-07-13 | (https://www.geeksforgeeks.org/problems/maximum-sum-of-elements-not-part-of-lis/1)
 
 |2025-07-14 | (https://www.geeksforgeeks.org/problems/cutting-binary-string1342/1)
+
+|2025-07-15  | (https://www.geeksforgeeks.org/problems/divisible-by-13/1)
