@@ -67,3 +67,5 @@ https://www.geeksforgeeks.org/problems/minimum-deletitions1648/1
 |2025-07-15  | (https://www.geeksforgeeks.org/problems/divisible-by-13/1)
 
 |2025-07-17 | (https://www.geeksforgeeks.org/problems/power-of-k-in-n-where-k-may-be-non-prime4206/1)
+
+|2025-07-18 | (https://www.geeksforgeeks.org/problems/lcm-triplet1501/1)
