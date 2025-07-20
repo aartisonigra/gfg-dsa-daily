@@ -71,3 +71,5 @@ https://www.geeksforgeeks.org/problems/minimum-deletitions1648/1
 |2025-07-18 | (https://www.geeksforgeeks.org/problems/lcm-triplet1501/1)
 
 |2025-07-19 | (https://www.geeksforgeeks.org/problems/count-unique-vowel-strings/1)
+
+|2025-07-20 | (https://www.geeksforgeeks.org/problems/count-numbers-containing-specific-digits/1)
