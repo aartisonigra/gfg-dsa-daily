@@ -1,0 +1,41 @@
+You are given an array arr[] of positive integers. Your task is to count the number of pairs (i, j) such that:
+
+
+0 ≤ i < j ≤ n-1
+gcd(arr[i], arr[j]) = 1
+In other words, count the number of unordered pairs of indices (i, j) where the elements at those positions are co-prime.
+
+Examples:
+
+Input: arr[] = [1, 2, 3]
+Output: 3
+Explanation: (0,1), (0,2), (1,2) are the pair of indices where gcd(arr[i], arr[j]) = 1
+Input: arr[] = [4, 8, 3, 9]
+Output: 4
+Explanation: (0,2), (0,3), (1,2), (1,3) are the pair of indices where gcd(arr[i], arr[j]) = 1
+
+
+  SOLUTIONS;
+
+class Solution {
+public:
+    long cntCoprime(vector<int>& nums) {
+        int M = *max_element(nums.begin(), nums.end());
+        vector<int> ctr(M + 1, 0);
+        for (int el : nums) ctr[el]++;
+        vector<int> mctr(M + 1, 0);
+        for (int i = 1; i <= M; ++i)
+            for (int mul = 1; i * mul <= M; ++mul)
+                mctr[i] += ctr[i * mul];
+        vector<long> dp(M + 1, 0);
+        for (int i = M; i >= 1; --i) {
+            dp[i] = (long)mctr[i] * (mctr[i] - 1) / 2;
+            for (int mul = 2; i * mul <= M; ++mul)
+                dp[i] -= dp[i * mul];
+        }
+        return dp[1];
+    }
+};
+ 
+
+
