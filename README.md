@@ -77,3 +77,6 @@ https://www.geeksforgeeks.org/problems/minimum-deletitions1648/1
 |2025-07-21 | (https://www.geeksforgeeks.org/problems/count-the-coprimes/1)
 
 |2025-07-22 | (https://www.geeksforgeeks.org/problems/smallest-positive-missing-number-1587115621/1)
+
+
+|2025-07-23 | (https://www.geeksforgeeks.org/problems/sum-of-subarrays2229/1)
