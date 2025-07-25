@@ -82,3 +82,5 @@ https://www.geeksforgeeks.org/problems/minimum-deletitions1648/1
 |2025-07-23 | (https://www.geeksforgeeks.org/problems/sum-of-subarrays2229/1)
 
 |2026-07024 | (https://www.geeksforgeeks.org/problems/last-moment-before-all-ants-fall-out-of-a-plank/1)
+
+|2026-07-25 | (https://www.geeksforgeeks.org/problems/max-circular-subarray-sum-1587115620/1)
