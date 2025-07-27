@@ -86,3 +86,5 @@ https://www.geeksforgeeks.org/problems/minimum-deletitions1648/1
 |2026-07-25 | (https://www.geeksforgeeks.org/problems/max-circular-subarray-sum-1587115620/1)
 
 |2025-07-26 | (https://www.geeksforgeeks.org/problems/majority-vote/1)
+
+|2025-07-27 | (https://www.geeksforgeeks.org/problems/set-matrix-zeroes/1)
