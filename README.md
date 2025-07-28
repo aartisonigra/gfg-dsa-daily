@@ -88,3 +88,5 @@ https://www.geeksforgeeks.org/problems/minimum-deletitions1648/1
 |2025-07-26 | (https://www.geeksforgeeks.org/problems/majority-vote/1)
 
 |2025-07-27 | (https://www.geeksforgeeks.org/problems/set-matrix-zeroes/1)
+
+|2025-07-28 | (https://www.geeksforgeeks.org/problems/make-matrix-beautiful-1587115620/1)
