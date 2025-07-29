@@ -1,0 +1,54 @@
+Given a string s consisting of lowercase English letters, for every character whose first and last occurrences are at different positions, calculate the sum of ASCII values of characters strictly between its first and last occurrence.
+Return all such non-zero sums (order does not matter).
+
+Examples:
+
+Input: s = "abacab"
+Output: [293, 294]
+Explanation: characters 'a' and 'b' appear more than once:
+'a' : between positions 1 and 5 → characters are b, a, c and ascii sum is 98 + 97 + 99 = 294.
+'b' : between positions 2 and 6 → characters are a, c, a and ascii sum is 97 + 99 + 97 = 293.
+Input: s = "acdac"
+Output: [197, 199]
+Explanation: characters 'a' and 'c' appear more than once:
+'a' : between positions 1 and 4 → characters are c, d and ascii sum is 99 + 100 = 199.
+'c' : between positions 2 and 5 → characters are d, a and ascii sum is 100 + 97 = 197.
+
+  SOLUTIONS:
+
+import java.util.*;
+
+class Solution {
+    public ArrayList<Integer> asciirange(String s) {
+        Map<Character, Integer> firstPos = new HashMap<>();
+        Map<Character, Integer> lastPos = new HashMap<>();
+        ArrayList<Integer> result = new ArrayList<>();
+
+        // Step 1: Find first and last position of each character
+        for (int i = 0; i < s.length(); i++) {
+            char ch = s.charAt(i);
+            if (!firstPos.containsKey(ch)) {
+                firstPos.put(ch, i);
+            }
+            lastPos.put(ch, i);  // This will keep updating to last position
+        }
+
+        // Step 2: For each character with different first and last position, calculate sum
+        for (char ch : firstPos.keySet()) {
+            int start = firstPos.get(ch);
+            int end = lastPos.get(ch);
+
+            if (start != end) {
+                int sum = 0;
+                for (int i = start + 1; i < end; i++) {
+                    sum += (int) s.charAt(i);
+                }
+                if (sum > 0) {
+                    result.add(sum);
+                }
+            }
+        }
+
+        return result;
+    }
+}
