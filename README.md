@@ -92,3 +92,5 @@ https://www.geeksforgeeks.org/problems/minimum-deletitions1648/1
 |2025-07-28 | (https://www.geeksforgeeks.org/problems/make-matrix-beautiful-1587115620/1)
 
 |2025-07-29 | (https://www.geeksforgeeks.org/problems/ascii-range-sum/1)
+
+|2025-07-30 | (https://www.geeksforgeeks.org/problems/subarrays-with-sum-k/1)
