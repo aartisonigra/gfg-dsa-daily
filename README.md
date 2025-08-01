@@ -96,3 +96,6 @@ https://www.geeksforgeeks.org/problems/minimum-deletitions1648/1
 |2025-07-30 | (https://www.geeksforgeeks.org/problems/subarrays-with-sum-k/1)
 
 |2025-07-31 | (https://www.geeksforgeeks.org/problems/powerfull-integer--170647/1)
+
+
+|2025-08-01 | (https://www.geeksforgeeks.org/problems/balancing-consonants-and-vowels-ratio/1)
