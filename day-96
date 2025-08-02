@@ -1,0 +1,54 @@
+Given an array arr[] and an integer k, the task is to find the length of longest subarray in which the count of elements greater than k is more than the count of elements less than or equal to k.
+
+Examples:
+
+Input: arr[] = [1, 2, 3, 4, 1], k = 2
+Output: 3
+Explanation: The subarray [2, 3, 4] or [3, 4, 1] satisfy the given condition, and there is no subarray of length 4 or 5 which will hold the given condition, so the answer is 3.
+Input: arr[] = [6, 5, 3, 4], k = 2
+Output: 4
+Explanation: In the subarray [6, 5, 3, 4], there are 4 elements > 2 and 0 elements <= 2, so it is the longest subarray.
+
+
+SOLUTIONS:
+
+import java.util.*;
+
+class Solution {
+    public int longestSubarray(int[] arr, int k) {
+        int n = arr.length;
+        Map<Integer, Integer> map = new HashMap<>();
+        int maxLen = 0;
+        int prefixSum = 0;
+
+        // Initialize: if prefixSum is >0 from start
+        map.put(0, -1);  // base case
+
+        for (int i = 0; i < n; i++) {
+            // Step 1: Convert to +1/-1 based on comparison with k
+            if (arr[i] > k) {
+                prefixSum += 1;
+            } else {
+                prefixSum += -1;
+            }
+
+            // Step 2: If prefixSum > 0, full subarray from 0 to i is valid
+            if (prefixSum > 0) {
+                maxLen = i + 1;
+            }
+            // Step 3: Else check if this prefixSum was seen before
+            else {
+                if (map.containsKey(prefixSum - 1)) {
+                    maxLen = Math.max(maxLen, i - map.get(prefixSum - 1));
+                }
+            }
+
+            // Step 4: Store first occurrence of this prefixSum
+            if (!map.containsKey(prefixSum)) {
+                map.put(prefixSum, i);
+            }
+        }
+
+        return maxLen;
+    }
+}
