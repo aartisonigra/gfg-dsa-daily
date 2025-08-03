@@ -101,3 +101,5 @@ https://www.geeksforgeeks.org/problems/minimum-deletitions1648/1
 |2025-08-01 | (https://www.geeksforgeeks.org/problems/balancing-consonants-and-vowels-ratio/1)
 
 |2025-08-02 | (https://www.geeksforgeeks.org/problems/longest-subarray-with-majority-greater-than-k/1)
+
+|2025-08-03 | (https://www.geeksforgeeks.org/problems/2-d-difference-array/1)
