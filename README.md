@@ -105,3 +105,5 @@ https://www.geeksforgeeks.org/problems/minimum-deletitions1648/1
 |2025-08-03 | (https://www.geeksforgeeks.org/problems/2-d-difference-array/1)
 
 |2025-04-08 | (https://www.geeksforgeeks.org/problems/maximum-sum-rectangle2948/1)
+
+|2025-08-05 | (https://www.geeksforgeeks.org/problems/string-palindromic-ignoring-spaces4723/1)
