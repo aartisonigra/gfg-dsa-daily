@@ -115,3 +115,5 @@ https://www.geeksforgeeks.org/problems/minimum-deletitions1648/1
 |2025-08-09 | (https://www.geeksforgeeks.org/problems/longest-periodic-proper-prefix/1)
 
 |2025-08-10 | (https://www.geeksforgeeks.org/problems/count-palindrome-sub-strings-of-a-string0652/1)
+
+|2025-08-12 | (https://www.geeksforgeeks.org/problems/shop-in-candy-store1145/1)
