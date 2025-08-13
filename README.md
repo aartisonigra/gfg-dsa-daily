@@ -117,3 +117,5 @@ https://www.geeksforgeeks.org/problems/minimum-deletitions1648/1
 |2025-08-10 | (https://www.geeksforgeeks.org/problems/count-palindrome-sub-strings-of-a-string0652/1)
 
 |2025-08-12 | (https://www.geeksforgeeks.org/problems/shop-in-candy-store1145/1)
+
+|2025-08-13 | (https://www.geeksforgeeks.org/problems/tywins-war-strategy0527/1)
