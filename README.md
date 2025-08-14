@@ -119,3 +119,5 @@ https://www.geeksforgeeks.org/problems/minimum-deletitions1648/1
 |2025-08-12 | (https://www.geeksforgeeks.org/problems/shop-in-candy-store1145/1)
 
 |2025-08-13 | (https://www.geeksforgeeks.org/problems/tywins-war-strategy0527/1)
+
+|2025-08-14 | (https://www.geeksforgeeks.org/problems/count-reverse-pairs/1)
