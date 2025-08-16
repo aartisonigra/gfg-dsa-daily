@@ -1,0 +1,37 @@
+Given an array of integers arr[] representing non-negative integers, arrange them so that after concatenating all of them in order, it results in the largest possible number. Since the result may be very large, return it as a string.
+
+Examples:
+
+Input: arr[] = [3, 30, 34, 5, 9]
+Output: 9534330
+Explanation: Given numbers are [3, 30, 34, 5, 9], the arrangement [9, 5, 34, 3, 30] gives the largest value.
+Input: arr[] = [54, 546, 548, 60]
+Output: 6054854654
+Explanation: Given numbers are [54, 546, 548, 60], the arrangement [60, 548, 546, 54] gives the largest value.
+Input: arr[] = [3, 4, 6, 5, 9]
+Output: 96543
+Explanation: Given numbers are [3, 4, 6, 5, 9], the arrangement [9, 6, 5, 4, 3] gives the largest value.
+
+
+  SOLTUIONS:
+
+import java.util.*;
+
+class Solution {
+    public String findLargest(int[] arr) {
+        // 1) int[] -> String[]
+        String[] s = new String[arr.length];
+        for (int i = 0; i < arr.length; i++) s[i] = String.valueOf(arr[i]);
+
+        // 2) Custom sort: (b+a) > (a+b) then b first
+        Arrays.sort(s, (a, b) -> (b + a).compareTo(a + b));
+
+        // 3) All zeros case
+        if (s[0].equals("0")) return "0";
+
+        // 4) Join
+        StringBuilder sb = new StringBuilder();
+        for (String x : s) sb.append(x);
+        return sb.toString();
+    }
+}
