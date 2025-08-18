@@ -127,3 +127,5 @@ https://www.geeksforgeeks.org/problems/minimum-deletitions1648/1
 |2025-08-16 | (https://www.geeksforgeeks.org/problems/largest-number-formed-from-an-array1117/1)
 
 |2025-08-17 | (https://www.geeksforgeeks.org/problems/sort-by-absolute-difference-1587115621/1)
+
+|2025-08-18 | (https://www.geeksforgeeks.org/problems/find-h-index--165609/1)
