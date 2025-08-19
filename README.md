@@ -129,3 +129,5 @@ https://www.geeksforgeeks.org/problems/minimum-deletitions1648/1
 |2025-08-17 | (https://www.geeksforgeeks.org/problems/sort-by-absolute-difference-1587115621/1)
 
 |2025-08-18 | (https://www.geeksforgeeks.org/problems/find-h-index--165609/1)
+
+|2025-08-19 | (https://www.geeksforgeeks.org/problems/farthest-smaller-right/1)
