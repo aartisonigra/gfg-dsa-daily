@@ -133,3 +133,5 @@ https://www.geeksforgeeks.org/problems/minimum-deletitions1648/1
 |2025-08-19 | (https://www.geeksforgeeks.org/problems/farthest-smaller-right/1)
 
 |2025-08-20 | (https://www.geeksforgeeks.org/problems/search-in-fully-rotated-sorted-2d-matrix/1)
+
+|2025-08-21 | (https://www.geeksforgeeks.org/problems/maximize-the-minimum-difference-between-k-elements/1)
