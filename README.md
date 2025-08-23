@@ -137,3 +137,5 @@ https://www.geeksforgeeks.org/problems/minimum-deletitions1648/1
 |2025-08-21 | (https://www.geeksforgeeks.org/problems/maximize-the-minimum-difference-between-k-elements/1)
 
 |2025-08-22 | (https://www.geeksforgeeks.org/problems/median-in-a-row-wise-sorted-matrix1527/1)
+
+|2025-08-23 | (https://www.geeksforgeeks.org/problems/allocate-minimum-number-of-pages0937/1)
