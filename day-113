@@ -1,0 +1,65 @@
+You have a row of flowers, where each flower blooms after a specific day. The array arr[] represents the blooming schedule: arr[i] is the day the flower at position i will bloom. To create a bouquet, you need to collect k adjacent bloomed flowers. Each flower can only be used in one bouquet.
+
+Your goal is to find the minimum number of days required to make exactly m bouquets. If it is not possible to make m bouquets with the given arrangement, return -1.
+
+Examples:
+Input: m = 3, k = 2, arr[] = [3, 4, 2, 7, 13, 8, 5]
+Output: 8
+Explanation: We need 3 bouquets and each bouquet should have 2 flowers. After day 8: [x, x, x, x, _, x, x], we can make first bouquet from the first 2 flowers, second bouquet from the next 2 flowers and the third bouquet from the last 2 flowers.
+Input: m = 2, k = 3, arr[] = [5, 5, 5, 5, 10, 5, 5]
+Output: 10
+Explanation: We need 2 bouquets and each bouquet should have 3 flowers, After day 5: [x, x, x, x, _, x, x], we can make one bouquet of the first three flowers that bloomed, but cannot make another bouquet. After day 10: [x, x, x, x, x, x, x], Now we can make two bouquets, taking 3 adjacent flowers in one bouquet.
+Input: m = 3, k = 2, arr[] = [1, 10, 3, 10, 2]
+Output: -1
+Explanation: As 3 bouquets each having 2 flowers are needed, that means we need 6 flowers. But there are only 5 flowers so it is impossible to get the needed bouquets therefore -1 will be returned
+
+
+SOLUTIONS:
+
+class Solution {
+    public int minDaysBloom(int[] arr, int k, int m) {
+        // 1) Impossible case: total flowers needed > total available
+        long need = (long) k * m; // long ताकि overflow न हो
+        if (arr == null || arr.length == 0 || need > arr.length) return -1;
+
+        // 2) Binary search range: min day ... max day
+        int lo = Integer.MAX_VALUE, hi = Integer.MIN_VALUE;
+        for (int d : arr) {
+            if (d < lo) lo = d;
+            if (d > hi) hi = d;
+        }
+
+        int ans = -1;
+        // 3) Binary search on days
+        while (lo <= hi) {
+            int mid = lo + (hi - lo) / 2; // avoid overflow
+
+            if (canMake(arr, k, m, mid)) {
+                ans = mid;        // mid days में possible है
+                hi = mid - 1;     // और कम दिन try करें
+            } else {
+                lo = mid + 1;     // days बढ़ाएँ
+            }
+        }
+        return ans;
+    }
+
+    // Check: 'day' तक कितने bouquets बना सकते हैं? (हर bouquet में k adjacent)
+    private boolean canMake(int[] arr, int k, int m, int day) {
+        int bouquets = 0, consecutive = 0;
+
+        for (int d : arr) {
+            if (d <= day) {
+                consecutive++;           // ये फूल उस दिन तक खिल चुका है
+                if (consecutive == k) {  // k लगातार मिल गए = 1 bouquet
+                    bouquets++;
+                    consecutive = 0;     // अगला bouquet ढूँढें (flowers reuse नहीं)
+                    if (bouquets >= m) return true; // early exit
+                }
+            } else {
+                consecutive = 0;         // break हुआ, फिर से count शुरू
+            }
+        }
+        return bouquets >= m;
+    }
+}
