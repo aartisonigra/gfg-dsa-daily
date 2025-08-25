@@ -1,0 +1,81 @@
+Special character of the string
+Problem Statement
+Ram was learning about strings, he read from the internet and got to know that the string is a series of characters. He was solving a problem and he got stuck and asked you for his help.
+
+The problem defined a special character of the string as the first nonrepeating character in the string.
+
+Given a string find the special character in it.
+
+Input Format
+The first line contains ‘n’, the number of characters in the string.
+
+The following line contains the input string.
+
+Output Format
+If the special character exists, then print it else if it doesn’t exist print -1.
+
+Constraints
+1<=n<=106
+
+Sample Testcase 0
+Testcase Input
+4
+aabb
+Testcase Output
+-1
+Explanation
+The given string is aabb there is no non-repeating character in the string, hence a special character does not exist in the string and we print -1.
+
+Sample Testcase 1
+Testcase Input
+10
+abcbasdasd
+Testcase Output
+c
+Explanation
+The given string is abcbasdasd the first non-repeating character in the string is ‘c’ hence it is a special character.
+
+
+SOLUTIONS:
+
+
+
+import java.util.Scanner;
+
+public class Main {
+    public static char user_logic(int n, String s) {
+        // Frequency array (ASCII characters range)
+        int[] freq = new int[256];
+
+        // Count frequency of each character
+        for (int i = 0; i < n; i++) {
+            freq[s.charAt(i)]++;
+        }
+
+        // Find first non-repeating character
+        for (int i = 0; i < n; i++) {
+            if (freq[s.charAt(i)] == 1) {
+                return s.charAt(i);
+            }
+        }
+
+        // If not found
+        return (char) -1;
+    }
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        int n = scanner.nextInt();
+        String s = scanner.next();
+
+        char result = user_logic(n, s);
+
+        if (result == (char) -1) {
+            System.out.println("-1");
+        } else {
+            System.out.println(result);
+        }
+    }
+}
+
