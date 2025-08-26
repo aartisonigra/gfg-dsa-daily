@@ -145,3 +145,5 @@ https://www.geeksforgeeks.org/problems/minimum-deletitions1648/1
 |2025-08-24 | (https://www.geeksforgeeks.org/problems/minimum-days-to-make-m-bouquets/1)
 
 |2025-08-25 | (https://www.geeksforgeeks.org/problems/maximize-median-after-doing-k-addition-operation/1)
+
+|2025-08-26 | (https://www.geeksforgeeks.org/problems/given-two-strings-find-if-first-string-is-a-subsequence-of-second/1)
