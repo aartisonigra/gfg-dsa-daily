@@ -149,3 +149,5 @@ https://www.geeksforgeeks.org/problems/minimum-deletitions1648/1
 |2025-08-26 | (https://www.geeksforgeeks.org/problems/given-two-strings-find-if-first-string-is-a-subsequence-of-second/1)\
 
 |2025-08-27 | (https://www.geeksforgeeks.org/problems/count-possible-triangles-1587115620/1)
+
+|2025-08-28 | (https://www.geeksforgeeks.org/problems/maximize-number-of-1s0905/1)
