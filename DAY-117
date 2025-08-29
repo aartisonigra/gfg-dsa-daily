@@ -1,0 +1,70 @@
+Given two strings s and p. Find the smallest substring in s consisting of all the characters (including duplicates) of the string p. Return empty string in case no such substring is present.
+If there are multiple such substring of the same length found, return the one with the least starting index.
+
+Examples:
+
+Input: s = "timetopractice", p = "toc"
+Output: "toprac"
+Explanation: "toprac" is the smallest substring in which "toc" can be found.
+Input: s = "zoomlazapzo", p = "oza"
+Output: "apzo"
+Explanation: "apzo" is the smallest substring in which "oza" can be found.
+Input: s = "zoom", p = "zooe"
+Output: ""
+Explanation: No substring is present containing all characters of p.
+
+SOLUTIONS:
+
+import java.util.*;
+
+class Solution {
+    public static String smallestWindow(String s, String p) {
+        if (s.length() < p.length()) return "";
+
+        int[] freqP = new int[256]; // frequency of p
+        for (char ch : p.toCharArray()) {
+            freqP[ch]++;
+        }
+
+        int count = 0; // how many chars matched
+        int start = 0, minLen = Integer.MAX_VALUE, startIndex = -1;
+        int[] freqS = new int[256]; // frequency of current window
+
+        for (int end = 0; end < s.length(); end++) {
+            char ch = s.charAt(end);
+            freqS[ch]++;
+
+            // if char is useful and freq not exceeded
+            if (freqP[ch] != 0 && freqS[ch] <= freqP[ch]) {
+                count++;
+            }
+
+            // if all chars of p matched
+            if (count == p.length()) {
+                // shrink window from left
+                while (freqP[s.charAt(start)] == 0 || freqS[s.charAt(start)] > freqP[s.charAt(start)]) {
+                    if (freqS[s.charAt(start)] > freqP[s.charAt(start)]) {
+                        freqS[s.charAt(start)]--;
+                    }
+                    start++;
+                }
+
+                int windowLen = end - start + 1;
+                if (windowLen < minLen) {
+                    minLen = windowLen;
+                    startIndex = start;
+                }
+            }
+        }
+
+        if (startIndex == -1) return "";
+        return s.substring(startIndex, startIndex + minLen);
+    }
+
+    // Example run
+    public static void main(String[] args) {
+        System.out.println(smallestWindow("timetopractice", "toc")); // "toprac"
+        System.out.println(smallestWindow("zoomlazapzo", "oza"));   // "apzo"
+        System.out.println(smallestWindow("zoom", "zooe"));         // ""
+    }
+}
