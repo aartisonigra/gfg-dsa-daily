@@ -155,3 +155,5 @@ https://www.geeksforgeeks.org/problems/minimum-deletitions1648/1
 |2025-08-29  | (https://www.geeksforgeeks.org/problems/smallest-window-in-a-string-containing-all-the-characters-of-another-string-1587115621/1)
 
 |2025-08-30 | (https://www.geeksforgeeks.org/problems/the-celebrity-problem/1)
+
+|2025-08-31 | (https://www.geeksforgeeks.org/problems/container-with-most-water0535/1)
