@@ -157,3 +157,5 @@ https://www.geeksforgeeks.org/problems/minimum-deletitions1648/1
 |2025-08-30 | (https://www.geeksforgeeks.org/problems/the-celebrity-problem/1)
 
 |2025-08-31 | (https://www.geeksforgeeks.org/problems/container-with-most-water0535/1)
+
+|2025-09-25 | (https://www.geeksforgeeks.org/problems/sum-of-mode/1)
