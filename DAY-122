@@ -1,0 +1,95 @@
+Given the head of a singly linked list and an integer k. Swap the kth node (1-based index) from the beginning and the kth node from the end of the linked list. Return the head of the final formed list and if it's not possible to swap the nodes return the original list.
+
+Examples:
+
+Input: k = 1,
+  
+Output: 5 -> 2 -> 3 -> 4 -> 1
+Explanation: Here k = 1, hence after swapping the 1st node from the beginning and end the new list will be 5 -> 2 -> 3 -> 4 -> 1.
+  
+Input: k = 2,
+  
+Output: 5 -> 9 -> 8 -> 5 -> 10 -> 3
+Explanation: Here k = 2, hence after swapping the 2nd node from the beginning and end the new list will be 5 -> 9 -> 8 -> 5 -> 10 -> 3.
+
+
+SOLURIONS:
+
+/*
+class Node {
+    int data;
+    Node next;
+
+    Node(int x) {
+        data = x;
+        next = null;
+    }
+}
+*/
+
+class Solution {
+    public Node swapKth(Node head, int k) {
+        if (head == null || k <= 0) return head;
+
+        // 1) length n निकालो
+        int n = 0;
+        Node tmp = head;
+        while (tmp != null) {
+            n++;
+            tmp = tmp.next;
+        }
+
+        // अगर k list से बड़ा है तो swap नहीं होगा
+        if (k > n) return head;
+
+        // अगर दोनों same node हों (middle node in odd length) तो कोई बदलाव नहीं
+        if (2 * k - 1 == n) return head;
+
+        // 2) kth node from start: currX और उसका prev prevX
+        Node prevX = null, currX = head;
+        for (int i = 1; i < k; i++) {
+            prevX = currX;
+            currX = currX.next;
+        }
+
+        // 3) kth node from end => index = n-k+1. prevY और currY
+        Node prevY = null, currY = head;
+        for (int i = 1; i <= n - k; i++) {
+            prevY = currY;
+            currY = currY.next;
+        }
+
+        // safety
+        if (currX == currY) return head;
+
+        // 4) original next pointers और adjacency पता कर लो (important)
+        Node nextX = currX.next;
+        Node nextY = currY.next;
+        boolean xBeforeY = (currX.next == currY); // X immediately before Y
+        boolean yBeforeX = (currY.next == currX); // Y immediately before X
+
+        // 5) prev pointers को अपडेट करो (head बदल सकता है)
+        if (prevX != null) prevX.next = currY;
+        else head = currY;
+
+        if (prevY != null) prevY.next = currX;
+        else head = currX;
+
+        // 6) next pointers (adjacent / non-adjacent cases अलग handle करना ज़रूरी)
+        if (xBeforeY) {
+            // X -> Y case
+            currX.next = nextY;
+            currY.next = currX;
+        } else if (yBeforeX) {
+            // Y -> X case
+            currY.next = nextX;
+            currX.next = currY;
+        } else {
+            // non-adjacent
+            currX.next = nextY;
+            currY.next = nextX;
+        }
+
+        return head;
+    }
+}
