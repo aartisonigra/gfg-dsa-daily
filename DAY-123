@@ -1,0 +1,42 @@
+Reverse a Doubly Linked List
+Difficulty: EasyAccuracy: 70.38%Submissions: 196K+Points: 2Average Time: 15m
+You are given the head of a doubly linked list. You have to reverse the doubly linked list and return its head.
+
+Examples:
+
+Input:
+   
+Output: 5 <-> 4 <-> 3
+Explanation: After reversing the given doubly linked list the new list will be 5 <-> 4 <-> 3.
+   
+Input: 
+   
+Output: 196 <-> 59 <-> 122 <-> 75
+Explanation: After reversing the given doubly linked list the new list will be 196 <-> 59 <-> 122 <-> 75.
+
+
+SOLUTIONS;
+
+class Solution {
+    public Node reverse(Node head) {
+        if (head == null || head.next == null) return head;
+
+        Node curr = head;
+        Node temp = null;
+
+        while (curr != null) {
+            // swap prev and next
+            temp = curr.prev;
+            curr.prev = curr.next;
+            curr.next = temp;
+
+            // move to next (which is previous before swap)
+            curr = curr.prev;
+        }
+
+        // temp अभी last processed node की ओर इशारा कर रहा है
+        if (temp != null) head = temp.prev;
+
+        return head;
+    }
+}
