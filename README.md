@@ -161,3 +161,5 @@ https://www.geeksforgeeks.org/problems/minimum-deletitions1648/1
 |2025-09-25 | (https://www.geeksforgeeks.org/problems/sum-of-mode/1)
 
 |2025-09-02 | (https://www.geeksforgeeks.org/problems/swap-kth-node-from-beginning-and-kth-node-from-end-in-a-singly-linked-list/1)
+
+|2025-09-03 | (https://www.geeksforgeeks.org/problems/reverse-a-doubly-linked-list/1)
