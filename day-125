@@ -1,0 +1,25 @@
+Given a non-empty sequence of characters s, return true if sequence is Binary, else return false.
+
+Examples:
+
+Input: s = "101"
+Output: true
+Explanation: Since string contains only '0' and '1', output is true.
+Input: s = "75"
+Output: false
+Explanation: Since string contains digits other than '0' and '1', output is false.
+
+  SOLUTIONS:
+
+class Solution {
+    boolean isBinary(String s) {
+        // Your code here
+        for(int i = 0;i < s.length();i++){
+            char ch = s.charAt(i);
+            if(ch != '0' && ch != '1') {
+                return false;
+            }
+        }
+        return true;
+    }
+}
