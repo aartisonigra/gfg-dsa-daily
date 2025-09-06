@@ -167,3 +167,5 @@ https://www.geeksforgeeks.org/problems/minimum-deletitions1648/1
 |2025-09-04 | (https://www.geeksforgeeks.org/problems/sum-of-series2811/1?page=1&difficulty=School&sortBy=submissions)]
 
 |2025-09-05 | (https://www.geeksforgeeks.org/problems/check-for-binary/1?page=1&difficulty=School&sortBy=submissions)
+
+|2025-09-06 | (https://www.geeksforgeeks.org/problems/odd-or-even3618/1?page=2&difficulty=School&sortBy=submissions)
