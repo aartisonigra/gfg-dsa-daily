@@ -175,3 +175,5 @@ https://www.geeksforgeeks.org/problems/minimum-deletitions1648/1
 |2025-09-08| (https://www.geeksforgeeks.org/problems/swap-two-numbers3844/1?page=2&difficulty=School&sortBy=submissions)
 
 |2025-09-10 | (https://www.geeksforgeeks.org/problems/vowel-or-not0831/1?page=3&difficulty=School&sortBy=submissions)
+
+|2025-09-11 | (https://www.geeksforgeeks.org/problems/minimum-number-of-jumps-1587115620/1)
