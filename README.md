@@ -181,3 +181,5 @@ https://www.geeksforgeeks.org/problems/minimum-deletitions1648/1
 |2025-09-12 | (https://www.geeksforgeeks.org/problems/minimize-the-heights3351/1)
 
 |2025-09-13 | (https://www.geeksforgeeks.org/problems/minimum-cost-to-cut-a-board-into-squares/1)
+
+|2025-09-14 | (https://www.geeksforgeeks.org/problems/lower-case-to-upper-case3410/1?page=4&difficulty=School&sortBy=submissions)
