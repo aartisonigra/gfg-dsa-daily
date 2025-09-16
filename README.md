@@ -185,3 +185,5 @@ https://www.geeksforgeeks.org/problems/minimum-deletitions1648/1
 |2025-09-14 | (https://www.geeksforgeeks.org/problems/lower-case-to-upper-case3410/1?page=4&difficulty=School&sortBy=submissions)
 
 |2025-09-15 | (https://www.geeksforgeeks.org/problems/string-stack--165812/1)
+
+|2025-09-16 | (https://www.geeksforgeeks.org/problems/evaluation-of-postfix-expression1735/1)
