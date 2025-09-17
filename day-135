@@ -1,0 +1,33 @@
+Geek is very fond of patterns. Once, his teacher gave him a star pattern to solve. He gave Geek an integer n and asked him to build a pattern.
+
+Help Geek to build a star pattern.
+
+Examples:
+
+
+  *
+*  *
+*  *
+  *
+
+  SOLUTIONS:
+
+class Solution {
+    void printDiamond(int n) {
+        // Increasing part
+        for (int i = 1; i <= n; i++) {
+            for (int j = 1; j <= i; j++) {
+                System.out.print("* ");
+            }
+            System.out.println();
+        }
+        
+        // Decreasing part
+        for (int i = n; i >= 1; i--) {
+            for (int j = 1; j <= i; j++) {
+                System.out.print("* ");
+            }
+            System.out.println();
+        }
+    }
+}
