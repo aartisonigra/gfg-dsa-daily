@@ -187,3 +187,5 @@ https://www.geeksforgeeks.org/problems/minimum-deletitions1648/1
 |2025-09-15 | (https://www.geeksforgeeks.org/problems/string-stack--165812/1)
 
 |2025-09-16 | (https://www.geeksforgeeks.org/problems/evaluation-of-postfix-expression1735/1)
+
+|2025-09-18 | (https://www.geeksforgeeks.org/problems/print-alternate-elements-of-an-array/1)
