@@ -189,3 +189,5 @@ https://www.geeksforgeeks.org/problems/minimum-deletitions1648/1
 |2025-09-16 | (https://www.geeksforgeeks.org/problems/evaluation-of-postfix-expression1735/1)
 
 |2025-09-18 | (https://www.geeksforgeeks.org/problems/print-alternate-elements-of-an-array/1)
+
+|2025-09-19 | (https://www.geeksforgeeks.org/problems/count-digits5716/1?page=1&difficulty=School&sortBy=submissions)
