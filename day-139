@@ -1,0 +1,50 @@
+Given an array arr[] of integers, calculate the median.
+
+Examples:
+
+Input: arr[] = [90, 100, 78, 89, 67]
+Output: 89
+Explanation: After sorting the array middle element is the median 
+Input: arr[] = [56, 67, 30, 79]
+Output: 61.5
+Explanation: In case of even number of elements, average of two middle elements is the median. 
+Input: arr[] = [1, 2]
+Output: 1.5
+Explanation: The average of both elements will result in 1.5.
+
+
+  SOLUTIONs:
+
+  import java.util.*;
+
+class Solution {
+    public double findMedian(int[] arr) {
+        Arrays.sort(arr);  // Step 1: Sort the array
+        int n = arr.length;
+        
+        // Step 2: Check odd or even length
+        if (n % 2 != 0) {
+            // Odd length → return middle element
+            return arr[n / 2];
+        } else {
+            // Even length → average of two middle elements
+            int mid1 = arr[(n / 2) - 1];
+            int mid2 = arr[n / 2];
+            return (mid1 + mid2) / 2.0;
+        }
+    }
+
+    // For testing
+    public static void main(String[] args) {
+        Solution sol = new Solution();
+        
+        int arr1[] = {90, 100, 78, 89, 67};
+        System.out.println(sol.findMedian(arr1)); // Output: 89.0
+        
+        int arr2[] = {56, 67, 30, 79};
+        System.out.println(sol.findMedian(arr2)); // Output: 61.5
+        
+        int arr3[] = {1, 2};
+        System.out.println(sol.findMedian(arr3)); // Output: 1.5
+    }
+}
