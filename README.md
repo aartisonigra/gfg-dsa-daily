@@ -193,3 +193,5 @@ https://www.geeksforgeeks.org/problems/minimum-deletitions1648/1
 |2025-09-19 | (https://www.geeksforgeeks.org/problems/count-digits5716/1?page=1&difficulty=School&sortBy=submissions)
 
 |2025-09-20 | (https://www.geeksforgeeks.org/problems/palindromic-array-1587115620/1?page=1&difficulty=School&sortBy=submissions)
+
+|2025-09-21 | (https://www.geeksforgeeks.org/problems/find-the-median0527/1?page=1&difficulty=School&sortBy=submissions)
