@@ -197,3 +197,5 @@ https://www.geeksforgeeks.org/problems/minimum-deletitions1648/1
 |2025-09-21 | (https://www.geeksforgeeks.org/problems/find-the-median0527/1?page=1&difficulty=School&sortBy=submissions)
 
 |2025-09-22 | (https://www.geeksforgeeks.org/problems/armstrong-numbers2727/1)
+
+|2025-09-24 | (https://www.geeksforgeeks.org/problems/design-minmax-queue/1)
