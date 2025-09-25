@@ -199,3 +199,5 @@ https://www.geeksforgeeks.org/problems/minimum-deletitions1648/1
 |2025-09-22 | (https://www.geeksforgeeks.org/problems/armstrong-numbers2727/1)
 
 |2025-09-24 | (https://www.geeksforgeeks.org/problems/design-minmax-queue/1)
+
+|2025-09-25 | (https://www.geeksforgeeks.org/problems/generate-binary-numbers-1587115620/1)
