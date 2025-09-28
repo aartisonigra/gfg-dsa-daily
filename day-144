@@ -1,0 +1,55 @@
+Given an array of positive integers arr[] and a non-negative integer x, the task is to find the longest sub-array where the absolute difference between any two elements is not greater than x.
+If multiple such subarrays exist, return the one that starts at the smallest index.
+
+Examples:
+
+Input: arr[] = [8, 4, 5, 6, 7], x = 3 
+Output: [4, 5, 6, 7] 
+Explanation: The sub-array described by index [1..4], i.e. [4, 5, 6, 7]
+contains no two elements whose absolute differnce is greater than 3.
+Input: arr[] = [1, 10, 12, 13, 14], x = 2 
+Output: [12, 13, 14] 
+Explanation: The sub-array described by index [2..4], i.e. [12, 13, 14]
+contains no two elements whose absolute differnece is greater than 2. 
+
+  SOLUTIONS:
+
+import java.util.*;
+
+class Solution {
+    public ArrayList<Integer> longestSubarray(int[] arr, int x) {
+        ArrayList<Integer> result = new ArrayList<>();
+        int n = arr.length;
+        int maxLen = 0;
+        int startIndex = 0;
+
+        // सभी possible subarrays को check करो
+        for (int i = 0; i < n; i++) {
+            int minVal = arr[i];
+            int maxVal = arr[i];
+            for (int j = i; j < n; j++) {
+                // min और max को update करते रहो
+                minVal = Math.min(minVal, arr[j]);
+                maxVal = Math.max(maxVal, arr[j]);
+
+                // अगर condition टूटती है, तो आगे देखने की ज़रूरत नहीं
+                if (maxVal - minVal > x) {
+                    break;
+                }
+
+                // अगर नई लंबाई बड़ी है तो update करो
+                if ((j - i + 1) > maxLen) {
+                    maxLen = j - i + 1;
+                    startIndex = i;
+                }
+            }
+        }
+
+        // अब longest subarray को result में डाल दो
+        for (int k = startIndex; k < startIndex + maxLen; k++) {
+            result.add(arr[k]);
+        }
+
+        return result;
+    }
+}
