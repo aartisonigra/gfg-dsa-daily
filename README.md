@@ -203,3 +203,5 @@ https://www.geeksforgeeks.org/problems/minimum-deletitions1648/1
 |2025-09-25 | (https://www.geeksforgeeks.org/problems/generate-binary-numbers-1587115620/1)
 
 |2025-09-26 | (https://www.geeksforgeeks.org/problems/rotate-deque-by-k/1)
+
+|2025-09-28 | (https://www.geeksforgeeks.org/problems/longest-bounded-difference-subarray/1)
