@@ -208,4 +208,6 @@ https://www.geeksforgeeks.org/problems/minimum-deletitions1648/1
 
 |2025-09-29 | (https://www.geeksforgeeks.org/problems/maximum-subarray-sum--110820/1)
 
-|2025-09-30 | (https://www.geeksforgeeks.org/problems/generate-all-binary-strings/1
+|2025-09-30 | (https://www.geeksforgeeks.org/problems/generate-all-binary-strings/1)
+
+|2025-10-1 | (https://www.geeksforgeeks.org/problems/all-unique-permutations-of-an-array/1)
