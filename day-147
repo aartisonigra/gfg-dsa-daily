@@ -1,0 +1,50 @@
+Given an array arr[] that may contain duplicates. Find all possible distinct permutations of the array in sorted order.
+Note: A sequence A is greater than sequence B if there is an index i for which Aj = Bj for all j<i and Ai > Bi.
+
+Examples:
+
+Input: arr[] = [1, 3, 3]
+Output: [[1, 3, 3], [3, 1, 3], [3, 3, 1]]
+Explanation: These are the only possible distinct permutations for the given array.
+Input: arr[] = [2, 3]
+Output: [[2, 3], [3, 2]]
+Explanation: These are the only possible distinct permutations for the given array.
+
+
+  solutions:
+
+  import java.util.*;
+
+class Solution {
+    public static ArrayList<ArrayList<Integer>> uniquePerms(int[] arr) {
+        ArrayList<ArrayList<Integer>> result = new ArrayList<>();
+        Arrays.sort(arr); // पहले sort करो
+        boolean[] used = new boolean[arr.length];
+        backtrack(arr, new ArrayList<>(), result, used);
+        return result;
+    }
+
+    private static void backtrack(int[] arr, ArrayList<Integer> temp, ArrayList<ArrayList<Integer>> result, boolean[] used) {
+        if (temp.size() == arr.length) {
+            result.add(new ArrayList<>(temp));
+            return;
+        }
+
+        for (int i = 0; i < arr.length; i++) {
+            // अगर यह element already use हो चुका है → skip
+            if (used[i]) continue;
+
+            // Duplicate avoid करने का condition
+            if (i > 0 && arr[i] == arr[i - 1] && !used[i - 1]) continue;
+
+            used[i] = true;
+            temp.add(arr[i]);
+
+            backtrack(arr, temp, result, used);
+
+            // Backtrack
+            used[i] = false;
+            temp.remove(temp.size() - 1);
+        }
+    }
+}
