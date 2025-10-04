@@ -213,3 +213,5 @@ https://www.geeksforgeeks.org/problems/minimum-deletitions1648/1
 |2025-10-1 | (https://www.geeksforgeeks.org/problems/all-unique-permutations-of-an-array/1)
 
 |2025-10-03 | (https://www.geeksforgeeks.org/problems/possible-words-from-phone-digits-1587115620/1)
+
+|2025-10-04 | (https://www.geeksforgeeks.org/problems/expression-add-operators/1)
