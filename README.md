@@ -215,3 +215,5 @@ https://www.geeksforgeeks.org/problems/minimum-deletitions1648/1
 |2025-10-03 | (https://www.geeksforgeeks.org/problems/possible-words-from-phone-digits-1587115620/1)
 
 |2025-10-04 | (https://www.geeksforgeeks.org/problems/expression-add-operators/1)
+
+|202510-06 | (https://www.geeksforgeeks.org/problems/the-knights-tour-problem/1)
