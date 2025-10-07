@@ -1,0 +1,89 @@
+You are given the root of a binary tree, and your task is to return its bottom view. The bottom view of a binary tree is the set of nodes visible when the tree is viewed from the bottom.
+
+Note: If there are multiple bottom-most nodes for a horizontal distance from the root, then the latter one in the level order traversal is considered.
+
+Examples :
+
+Input: root = [1, 2, 3, 4, 5, N, 6]
+    
+Output: [4, 2, 5, 3, 6]
+Explanation: The Green nodes represent the bottom view of below binary tree.
+    
+Input: root = [20, 8, 22, 5, 3, 4, 25, N, N, 10, 14, N, N, 28, N]
+    
+Output: [5, 10, 4, 28, 25]
+Explanation: The Green nodes represent the bottom view of below binary tree.
+    
+Constraints:
+1 ≤ number of nodes ≤ 105
+1 ≤ node->data ≤ 105
+
+
+  SOLUTIONS:
+
+/* Tree Node class
+class Node {
+    int data;
+    Node left;
+    Node right;
+
+    Node(int data) {
+        this.data = data;
+        left = null;
+        right = null;
+    }
+}
+*/
+
+import java.util.*;
+
+class Solution {
+    public ArrayList<Integer> bottomView(Node root) {
+        ArrayList<Integer> ans = new ArrayList<>();
+        if (root == null) return ans;
+
+        // Queue for BFS: store pair of (node, horizontal distance)
+        Queue<Pair> q = new LinkedList<>();
+        // TreeMap to store bottom-most node for each horizontal distance
+        TreeMap<Integer, Integer> map = new TreeMap<>();
+
+        q.add(new Pair(root, 0));
+
+        while (!q.isEmpty()) {
+            Pair curr = q.poll();
+            Node node = curr.node;
+            int hd = curr.hd;
+
+            // Put/replace the node at this horizontal distance
+            map.put(hd, node.data);
+
+            // Left child → hd - 1
+            if (node.left != null) {
+                q.add(new Pair(node.left, hd - 1));
+            }
+            // Right child → hd + 1
+            if (node.right != null) {
+                q.add(new Pair(node.right, hd + 1));
+            }
+        }
+
+        // Traverse map (sorted by hd) to form bottom view
+        for (int val : map.values()) {
+            ans.add(val);
+        }
+
+        return ans;
+    }
+}
+
+// Helper class to store node and its horizontal distance
+class Pair {
+    Node node;
+    int hd;
+
+    Pair(Node node, int hd) {
+        this.node = node;
+        this.hd = hd;
+    }
+}
+
