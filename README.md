@@ -217,3 +217,5 @@ https://www.geeksforgeeks.org/problems/minimum-deletitions1648/1
 |2025-10-04 | (https://www.geeksforgeeks.org/problems/expression-add-operators/1)
 
 |202510-06 | (https://www.geeksforgeeks.org/problems/the-knights-tour-problem/1)
+
+|2025-10-07 | (https://www.geeksforgeeks.org/problems/bottom-view-of-binary-tree/1)
