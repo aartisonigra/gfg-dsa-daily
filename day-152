@@ -1,0 +1,70 @@
+Given two arrays pre[] and post[] that represent the preorder and postorder traversals of a full binary tree. Your task is to construct the binary tree and return its root.
+
+Note:  Full Binary Tree is a binary tree where every node has either 0 or 2 children. The preorder and postorder traversals contain unique values, and every value present in the preorder traversal is also found in the postorder traversal.
+
+Examples:
+
+Input: pre[] = [1, 2, 4, 8, 9, 5, 3, 6, 7], post[] = [8, 9, 4, 5, 2, 6, 7, 3, 1]
+Output: [1, 2, 3, 4, 5, 6, 7, 8, 9]
+Explanation: The tree will look like
+   
+Input: pre[] = [1, 2, 4, 5, 3, 6, 7] , post[] = [4, 5, 2, 6, 7, 3, 1]
+Output: [1, 2, 3, 4, 5, 6, 7]
+Explanation: The tree will look like
+   
+Constraints:
+
+
+solutions:
+
+/*
+class Node {
+    int data;
+    Node left, right;
+
+    Node(int val) {
+        data = val;
+        left = right = null;
+    }
+}
+*/
+
+class Solution {
+    int preIndex = 0; // preorder array में index track करने के लिए
+
+    public Node constructTree(int[] pre, int[] post) {
+        int n = pre.length;
+        return buildTree(pre, post, 0, n - 1);
+    }
+
+    private Node buildTree(int[] pre, int[] post, int l, int h) {
+        // Base case
+        if (preIndex >= pre.length || l > h) {
+            return null;
+        }
+
+        // 1️⃣ Current node बनाओ (preorder से)
+        Node root = new Node(pre[preIndex++]);
+
+        // 2️⃣ अगर leaf node है तो return करो
+        if (l == h || preIndex >= pre.length) {
+            return root;
+        }
+
+        // 3️⃣ अगला preorder element postorder में कहाँ है ढूंढो (left subtree का size निकालने के लिए)
+        int i;
+        for (i = l; i <= h; i++) {
+            if (post[i] == pre[preIndex]) {
+                break;
+            }
+        }
+
+        // 4️⃣ Left और Right subtree बनाओ
+        if (i <= h) {
+            root.left = buildTree(pre, post, l, i);
+            root.right = buildTree(pre, post, i + 1, h - 1);
+        }
+
+        return root;
+    }
+}
