@@ -219,3 +219,5 @@ https://www.geeksforgeeks.org/problems/minimum-deletitions1648/1
 |202510-06 | (https://www.geeksforgeeks.org/problems/the-knights-tour-problem/1)
 
 |2025-10-07 | (https://www.geeksforgeeks.org/problems/bottom-view-of-binary-tree/1)
+
+|2025-10-08 | (https://www.geeksforgeeks.org/problems/construct-tree-from-preorder-postorder/1)
