@@ -221,3 +221,5 @@ https://www.geeksforgeeks.org/problems/minimum-deletitions1648/1
 |2025-10-07 | (https://www.geeksforgeeks.org/problems/bottom-view-of-binary-tree/1)
 
 |2025-10-08 | (https://www.geeksforgeeks.org/problems/construct-tree-from-preorder-postorder/1)
+
+|2024-10-09 | (https://www.geeksforgeeks.org/problems/postorder-traversal/1)
