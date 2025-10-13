@@ -227,3 +227,5 @@ https://www.geeksforgeeks.org/problems/minimum-deletitions1648/1
 |2025-10-11 | (https://leetcode.com/problems/maximum-total-damage-with-spell-casting/?envType=daily-question&envId=2025-10-11)
 
 |2025-10-12 | (https://www.geeksforgeeks.org/problems/distribute-candies-in-a-binary-tree/1)
+
+|2025-10-13 | (https://www.geeksforgeeks.org/problems/maximum-sum-of-non-adjacent-nodes/1)
