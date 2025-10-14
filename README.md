@@ -229,3 +229,5 @@ https://www.geeksforgeeks.org/problems/minimum-deletitions1648/1
 |2025-10-12 | (https://www.geeksforgeeks.org/problems/distribute-candies-in-a-binary-tree/1)
 
 |2025-10-13 | (https://www.geeksforgeeks.org/problems/maximum-sum-of-non-adjacent-nodes/1)
+
+|2025-10-14 | (https://www.geeksforgeeks.org/problems/range-sum-of-bst/1)
