@@ -231,3 +231,5 @@ https://www.geeksforgeeks.org/problems/minimum-deletitions1648/1
 |2025-10-13 | (https://www.geeksforgeeks.org/problems/maximum-sum-of-non-adjacent-nodes/1)
 
 |2025-10-14 | (https://www.geeksforgeeks.org/problems/range-sum-of-bst/1)
+
+|2025-10-16 | (https://www.geeksforgeeks.org/problems/remove-bst-keys-outside-given-range/1)
