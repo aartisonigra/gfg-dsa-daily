@@ -235,3 +235,5 @@ https://www.geeksforgeeks.org/problems/minimum-deletitions1648/1
 |2025-10-16 | (https://www.geeksforgeeks.org/problems/remove-bst-keys-outside-given-range/1)
 
 |2025-10-17 | (https://www.geeksforgeeks.org/problems/bst-to-greater-sum-tree/1)
+
+|2025-10-18 | (https://www.geeksforgeeks.org/problems/median-of-bst/1)
