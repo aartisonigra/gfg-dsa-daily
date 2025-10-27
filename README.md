@@ -245,3 +245,5 @@ https://www.geeksforgeeks.org/problems/minimum-deletitions1648/1
 |2025-10-21 | (https://www.geeksforgeeks.org/problems/top-k-frequent-elements-in-array/1)
 
 |2025-10-23 | (https://www.geeksforgeeks.org/problems/k-closest-points-to-origin--172242/1)
+
+|2025-10-27 | (https://www.geeksforgeeks.org/problems/find-k-smallest-sum-pairs/1)
