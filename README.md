@@ -249,3 +249,5 @@ https://www.geeksforgeeks.org/problems/minimum-deletitions1648/1
 |2025-10-27 | (https://www.geeksforgeeks.org/problems/find-k-smallest-sum-pairs/1)
 
 |2025-10-28 | (https://www.geeksforgeeks.org/problems/distance-of-nearest-cell-having-1-1587115620/1)
+
+|2025-10-29 | (https://www.geeksforgeeks.org/problems/diameter-of-a-graph/1)
