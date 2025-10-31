@@ -253,3 +253,5 @@ https://www.geeksforgeeks.org/problems/minimum-deletitions1648/1
 |2025-10-29 | (https://www.geeksforgeeks.org/problems/diameter-of-a-graph/1)
 
 |2025-10-30 | (https://www.geeksforgeeks.org/problems/replace-os-with-xs0052/1)
+
+|2025-10-31 | (https://www.geeksforgeeks.org/problems/shortest-cycle/1)
