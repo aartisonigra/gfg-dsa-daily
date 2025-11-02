@@ -257,3 +257,5 @@ https://www.geeksforgeeks.org/problems/minimum-deletitions1648/1
 |2025-10-31 | (https://www.geeksforgeeks.org/problems/shortest-cycle/1)
 
 |2025-11-01 | (https://www.geeksforgeeks.org/problems/course-schedule/1)
+
+|2025-11-02 | (https://leetcode.com/problems/count-unguarded-cells-in-the-grid/)
