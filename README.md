@@ -265,3 +265,5 @@ https://www.geeksforgeeks.org/problems/minimum-deletitions1648/1
 |2025-11-04 | (https://www.geeksforgeeks.org/problems/geek-jump/1)
 
 |2025-11-05 | (https://www.geeksforgeeks.org/problems/get-minimum-squares0538/1)
+
+|2025-11-06 | (https://www.geeksforgeeks.org/problems/ways-to-tile-a-floor5836/1)
