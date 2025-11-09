@@ -269,3 +269,5 @@ https://www.geeksforgeeks.org/problems/minimum-deletitions1648/1
 |2025-11-06 | (https://www.geeksforgeeks.org/problems/ways-to-tile-a-floor5836/1)
 
 |2025-11-07 | (https://www.geeksforgeeks.org/problems/weighted-job-scheduling/1)
+
+|2025-11-09 | (https://www.geeksforgeeks.org/problems/chocolate-pickup-ii/1)
