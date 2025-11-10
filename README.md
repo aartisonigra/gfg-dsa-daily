@@ -271,3 +271,5 @@ https://www.geeksforgeeks.org/problems/minimum-deletitions1648/1
 |2025-11-07 | (https://www.geeksforgeeks.org/problems/weighted-job-scheduling/1)
 
 |2025-11-09 | (https://www.geeksforgeeks.org/problems/chocolate-pickup-ii/1)
+
+|2025-11-10 | (https://www.geeksforgeeks.org/problems/buy-stock-with-cooldown/1)
