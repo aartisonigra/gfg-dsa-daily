@@ -277,3 +277,5 @@ https://www.geeksforgeeks.org/problems/minimum-deletitions1648/1
 |2025-11-14 | (https://www.geeksforgeeks.org/problems/minimum-cost-to-merge-stones/1)
 
 |2025-11-17 | (http://geeksforgeeks.org/problems/maximum-sum-increasing-subsequence4749/1)
+
+|2025-11-18 | (https://www.geeksforgeeks.org/problems/number-of-ways-to-arrive-at-destination/1)
