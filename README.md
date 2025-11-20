@@ -281,3 +281,5 @@ https://www.geeksforgeeks.org/problems/minimum-deletitions1648/1
 |2025-11-18 | (https://www.geeksforgeeks.org/problems/number-of-ways-to-arrive-at-destination/1)
 
 |2025-11-19 | (https://www.geeksforgeeks.org/problems/path-with-minimum-effort/1)
+
+|2025-11-20 | (https://www.geeksforgeeks.org/problems/make-strings-equal--150209/1)
