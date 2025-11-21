@@ -283,3 +283,5 @@ https://www.geeksforgeeks.org/problems/minimum-deletitions1648/1
 |2025-11-19 | (https://www.geeksforgeeks.org/problems/path-with-minimum-effort/1)
 
 |2025-11-20 | (https://www.geeksforgeeks.org/problems/make-strings-equal--150209/1)
+
+|2025-11-21 | (https://www.geeksforgeeks.org/problems/shortest-path-using-atmost-one-curved-edge--170647/1)
