@@ -287,3 +287,5 @@ https://www.geeksforgeeks.org/problems/minimum-deletitions1648/1
 |2025-11-21 | (https://www.geeksforgeeks.org/problems/shortest-path-using-atmost-one-curved-edge--170647/1)
 
 |2025-11-22 | (https://www.geeksforgeeks.org/problems/minimize-connections/1)
+
+|2025-11-23 | (https://www.geeksforgeeks.org/problems/maximum-stone-removal-1662179442/1)
