@@ -1,0 +1,105 @@
+Given an undirected graph of V vertices numbered from (0 to V-1) and E edges represented by a 2D array edges[][], where each edges[i] contains three integers [u, v, w], representing an undirected edge from u to v, having weight w.
+Your task is to find the weight of the second best minimum spanning tree of the given graph.
+A second best MST is defined as the minimum-weight spanning tree whose total weight is strictly greater than the weight of the minimum spanning tree.
+
+Note: If no such second best MST exists, return -1. 
+
+Examples:
+
+Input: V = 5, E = 7, edges[][] = [[0, 1, 4], [0, 2, 3], [1, 2, 1], [1, 3, 5], [2, 4, 10], [2, 3, 7], [3, 4, 2]]
+Output: 12
+Explanation:
+   
+Input: V = 5, E = 4, edges[][] = [[0, 1, 2], [1, 2, 3], [2, 3, 4], [3, 4, 5]] 
+Output: -1
+Explanation: No second best MST exists for this graph.
+   
+SOLUTIONS:
+
+
+  import java.util.*;
+
+class Solution {
+    
+    // DSU Class
+    class DSU {
+        int parent[], rank[];
+        
+        DSU(int n) {
+            parent = new int[n];
+            rank = new int[n];
+            for (int i = 0; i < n; i++)
+                parent[i] = i;
+        }
+        
+        int find(int x) {
+            if (parent[x] != x)
+                parent[x] = find(parent[x]);
+            return parent[x];
+        }
+        
+        boolean union(int a, int b) {
+            a = find(a);
+            b = find(b);
+            if (a == b) return false;
+            
+            if (rank[a] < rank[b]) parent[a] = b;
+            else if (rank[b] < rank[a]) parent[b] = a;
+            else {
+                parent[b] = a;
+                rank[a]++;
+            }
+            return true;
+        }
+    }
+    
+    public int secondMST(int V, int[][] edges) {
+        
+        // Step 1: Sort edges by weight
+        Arrays.sort(edges, (a, b) -> a[2] - b[2]);
+        
+        DSU dsu = new DSU(V);
+        
+        int mstWeight = 0;
+        List<int[]> mstEdges = new ArrayList<>();
+        
+        // Step 2: Build MST using Kruskal
+        for (int[] e : edges) {
+            if (dsu.union(e[0], e[1])) {
+                mstWeight += e[2];
+                mstEdges.add(e);
+            }
+        }
+        
+        // If MST does not contain V-1 edges, second MST is impossible
+        if (mstEdges.size() != V - 1) return -1;
+        
+        int secondBest = Integer.MAX_VALUE;
+        
+        // Step 3: Try removing each MST edge one by one
+        for (int[] removedEdge : mstEdges) {
+            
+            DSU dsu2 = new DSU(V);
+            int weight = 0;
+            int count = 0;
+            
+            for (int[] e : edges) {
+                
+                // Skip the removed edge
+                if (e == removedEdge) continue;
+                
+                if (dsu2.union(e[0], e[1])) {
+                    weight += e[2];
+                    count++;
+                }
+            }
+            
+            // If valid MST formed & weight is greater than main MST
+            if (count == V - 1 && weight > mstWeight) {
+                secondBest = Math.min(secondBest, weight);
+            }
+        }
+        
+        return (secondBest == Integer.MAX_VALUE) ? -1 : secondBest;
+    }
+}
