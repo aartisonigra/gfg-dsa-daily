@@ -293,3 +293,5 @@ https://www.geeksforgeeks.org/problems/minimum-deletitions1648/1
 |2025-11-24 | (https://www.geeksforgeeks.org/problems/second-best-minimum-spanning-tree/1)
 
 |2025-11-25 | (https://www.geeksforgeeks.org/problems/game-of-xor1541/1)
+
+|2025-11-27 | (https://www.geeksforgeeks.org/problems/sum-of-xor-of-all-possible-subsets/1)
