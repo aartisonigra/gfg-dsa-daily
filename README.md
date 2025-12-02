@@ -299,3 +299,5 @@ https://www.geeksforgeeks.org/problems/minimum-deletitions1648/1
 |2025-11-29 | (https://www.geeksforgeeks.org/problems/count-total-set-bits-1587115620/1)
 
 |2025-12-01 | (https://www.geeksforgeeks.org/problems/count-pairs-having-bitwise-xor-less-than-k/1)
+
+|2025-12-02 | (https://www.geeksforgeeks.org/problems/maximise-string-score--172902/1)
