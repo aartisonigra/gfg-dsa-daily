@@ -303,3 +303,5 @@ https://www.geeksforgeeks.org/problems/minimum-deletitions1648/1
 |2025-12-02 | (https://www.geeksforgeeks.org/problems/maximise-string-score--172902/1)
 
 |2025-12-08 | (https://www.geeksforgeeks.org/problems/brackets-in-matrix-chain-multiplication1024/1)
+
+|2025-12-09 | (https://www.geeksforgeeks.org/problems/find-duplicates-in-an-array/1)
