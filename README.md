@@ -305,3 +305,5 @@ https://www.geeksforgeeks.org/problems/minimum-deletitions1648/1
 |2025-12-08 | (https://www.geeksforgeeks.org/problems/brackets-in-matrix-chain-multiplication1024/1)
 
 |2025-12-09 | (https://www.geeksforgeeks.org/problems/find-duplicates-in-an-array/1)
+
+|2025-12-10 | (https://www.geeksforgeeks.org/problems/find-missing-and-repeating2512/1)
