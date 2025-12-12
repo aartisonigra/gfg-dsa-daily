@@ -309,3 +309,5 @@ https://www.geeksforgeeks.org/problems/minimum-deletitions1648/1
 |2025-12-10 | (https://www.geeksforgeeks.org/problems/find-missing-and-repeating2512/1)
 
 |2025-12-11 | (https://www.geeksforgeeks.org/problems/construct-an-array-from-its-pair-sum-array/1)
+
+|2025-12-12 | (https://www.geeksforgeeks.org/problems/transpose-of-matrix-1587115621/1)
