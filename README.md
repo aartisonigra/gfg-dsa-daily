@@ -311,3 +311,5 @@ https://www.geeksforgeeks.org/problems/minimum-deletitions1648/1
 |2025-12-11 | (https://www.geeksforgeeks.org/problems/construct-an-array-from-its-pair-sum-array/1)
 
 |2025-12-12 | (https://www.geeksforgeeks.org/problems/transpose-of-matrix-1587115621/1)
+
+|2025-12-13 | (https://www.geeksforgeeks.org/problems/swap-major-and-minor-diagonals-of-a-square-matrix/1)
