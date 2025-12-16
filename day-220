@@ -1,0 +1,27 @@
+You are given two strings s1 and s2, of equal lengths. The task is to check if s2 is a rotated version of the string s1.
+
+Note: A string is a rotation of another if it can be formed by moving characters from the start to the end (or vice versa) without rearranging them.
+
+Examples :
+
+Input: s1 = "abcd", s2 = "cdab"
+Output: true
+Explanation: After 2 right rotations, s1 will become equal to s2.
+Input: s1 = "aab", s2 = "aba"
+Output: true
+Explanation: After 1 left rotation, s1 will become equal to s2.
+Input: s1 = "abcd", s2 = "acbd"
+Output: false
+Explanation: Strings are not rotations of each other.
+
+
+  SOLUTIONS:
+
+class Solution:
+    def areRotations(self, s1, s2):
+        # If lengths are different, not rotations
+        if len(s1) != len(s2):
+            return False
+
+        # Join s1 with itself and check
+        return s2 in (s1 + s1)
