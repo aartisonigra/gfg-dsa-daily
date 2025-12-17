@@ -317,3 +317,5 @@ https://www.geeksforgeeks.org/problems/minimum-deletitions1648/1
 |2025-12-15 | (https://www.geeksforgeeks.org/problems/count-indices-to-balance-even-and-odd-sums/1)
 
 |2025-12-16 | (https://www.geeksforgeeks.org/problems/check-if-strings-are-rotations-of-each-other-or-not-1587115620/1)
+
+|2025-12-17 | (https://www.geeksforgeeks.org/problems/overlapping-intervals--170633/1)
