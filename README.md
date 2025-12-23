@@ -325,3 +325,5 @@ https://www.geeksforgeeks.org/problems/minimum-deletitions1648/1
 |2025-12-19 | (https://www.geeksforgeeks.org/problems/bus-conductor--170647/1)
 
 |2025-12-20 | (https://www.geeksforgeeks.org/problems/search-insert-position-of-k-in-a-sorted-array/1)
+
+|2025-12-23 | (https://www.geeksforgeeks.org/problems/find-number-of-elements-in-range-a-b-for-each-query/1)
