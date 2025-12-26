@@ -329,3 +329,5 @@ https://www.geeksforgeeks.org/problems/minimum-deletitions1648/1
 |2025-12-23 | (https://www.geeksforgeeks.org/problems/find-number-of-elements-in-range-a-b-for-each-query/1)
 
 |2025-12-24 | (https://www.geeksforgeeks.org/problems/odd-or-even3618/1)
+
+|2025-12-26 | (https://www.geeksforgeeks.org/problems/kth-missing-positive-number-in-a-sorted-array/1)
