@@ -1,0 +1,54 @@
+Given a matrix mat[][] of size n*n, where each row and column is sorted in non-decreasing order. Find the kth smallest element in the matrix.
+
+Examples:
+Input: mat[][] = [[16, 28, 60, 64], k = 3
+                [22, 41, 63, 91],
+                [27, 50, 87, 93],
+                [36, 78, 87, 94]]
+Output: 27
+Explanation: 27 is the 3rd smallest element.
+Input: mat[][] = [[10, 20, 30, 40], k = 7
+                [15, 25, 35, 45],
+                [24, 29, 37, 48],
+                [32, 33, 39, 50]] 
+Output: 30
+Explanation: 30 is the 7th smallest element.
+
+
+  SOLUTIONS:
+
+class Solution {
+    public int kthSmallest(int[][] mat, int k) {
+        int n = mat.length;
+        
+        int low = mat[0][0];
+        int high = mat[n - 1][n - 1];
+        
+        while (low < high) {
+            int mid = low + (high - low) / 2;
+            
+            if (countLessEqual(mat, mid) < k) {
+                low = mid + 1;
+            } else {
+                high = mid;
+            }
+        }
+        
+        return low;
+    }
+    
+    private int countLessEqual(int[][] mat, int mid) {
+        int n = mat.length;
+        int count = 0;
+        int col = n - 1;
+        
+        for (int row = 0; row < n; row++) {
+            while (col >= 0 && mat[row][col] > mid) {
+                col--;
+            }
+            count += (col + 1);
+        }
+        
+        return count;
+    }
+}
