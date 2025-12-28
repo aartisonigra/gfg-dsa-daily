@@ -333,3 +333,5 @@ https://www.geeksforgeeks.org/problems/minimum-deletitions1648/1
 |2025-12-26 | (https://www.geeksforgeeks.org/problems/kth-missing-positive-number-in-a-sorted-array/1)
 
 |2025-12-27 | (https://www.geeksforgeeks.org/problems/kth-element-in-matrix/1)
+
+|2025-12-28 | (https://www.geeksforgeeks.org/problems/minimum-time-to-fulfil-all-orders/1)
