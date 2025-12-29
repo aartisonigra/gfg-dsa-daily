@@ -335,3 +335,5 @@ https://www.geeksforgeeks.org/problems/minimum-deletitions1648/1
 |2025-12-27 | (https://www.geeksforgeeks.org/problems/kth-element-in-matrix/1)
 
 |2025-12-28 | (https://www.geeksforgeeks.org/problems/minimum-time-to-fulfil-all-orders/1)
+
+|2025-12-29 | (https://www.geeksforgeeks.org/problems/k-th-element-of-two-sorted-array1317/1)
