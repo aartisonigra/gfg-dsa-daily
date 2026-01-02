@@ -339,3 +339,5 @@ https://www.geeksforgeeks.org/problems/minimum-deletitions1648/1
 |2025-12-29 | (https://www.geeksforgeeks.org/problems/k-th-element-of-two-sorted-array1317/1)
 
 |2025-12-30 | (https://www.geeksforgeeks.org/problems/add-two-numbers-represented-by-linked-lists/1)
+
+|2025-01-02 | (https://www.geeksforgeeks.org/problems/sort-an-array-of-0s-1s-and-2s4231/1)
