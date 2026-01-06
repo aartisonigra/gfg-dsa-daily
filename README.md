@@ -347,3 +347,5 @@ https://www.geeksforgeeks.org/problems/minimum-deletitions1648/1
 |2025-01-04 | (https://www.geeksforgeeks.org/problems/sort-an-array-of-0s-1s-and-2s4231/1)
 
 |2025-01-05 | (https://www.geeksforgeeks.org/problems/max-sum-subarray-of-size-k5313/1)
+
+|2025-01-06 | (https://www.geeksforgeeks.org/problems/max-xor-subarray-of-size-k/1)
