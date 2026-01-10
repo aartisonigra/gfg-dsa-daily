@@ -351,3 +351,5 @@ https://www.geeksforgeeks.org/problems/minimum-deletitions1648/1
 |2025-01-06 | (https://www.geeksforgeeks.org/problems/max-xor-subarray-of-size-k/1)
 
 |205-01-08 | (https://www.geeksforgeeks.org/problems/count-subarray-with-k-odds/1)
+
+|2025-01-10| (https://www.geeksforgeeks.org/problems/count-number-of-substrings4528/1)
