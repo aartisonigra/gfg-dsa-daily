@@ -355,3 +355,5 @@ https://www.geeksforgeeks.org/problems/minimum-deletitions1648/1
 |2025-01-10| (https://www.geeksforgeeks.org/problems/count-number-of-substrings4528/1)
 
 |2025-01-11 | (https://www.geeksforgeeks.org/problems/minimum-window-subsequence/1)
+
+|2025-01-12 | (https://www.geeksforgeeks.org/problems/maximum-of-all-subarrays-of-size-k3101/1)
