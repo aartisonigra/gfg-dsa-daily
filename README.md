@@ -361,3 +361,5 @@ https://www.geeksforgeeks.org/problems/minimum-deletitions1648/1
 |2025-01-13 | (https://www.geeksforgeeks.org/problems/lemonade-change/1)
 
 |2025-01-14 | (https://www.geeksforgeeks.org/problems/police-and-thieves--141631/1)
+
+|2025-01-15 | (https://www.geeksforgeeks.org/problems/candy/1)
