@@ -365,3 +365,5 @@ https://www.geeksforgeeks.org/problems/minimum-deletitions1648/1
 |2025-01-15 | (https://www.geeksforgeeks.org/problems/candy/1)
 
 |2025-01-16 | (https://www.geeksforgeeks.org/problems/minimum-sprinklers/1)
+
+|2025-01-17 | (https://www.geeksforgeeks.org/problems/expression-contains-redundant-bracket-or-not/1)
