@@ -369,3 +369,5 @@ https://www.geeksforgeeks.org/problems/minimum-deletitions1648/1
 |2025-01-17 | (https://www.geeksforgeeks.org/problems/expression-contains-redundant-bracket-or-not/1)
 
 |2025-01-18 | (https://www.geeksforgeeks.org/problems/next-element-with-greater-frequency--170637/1)
+
+|2025-01-19 | (https://www.geeksforgeeks.org/problems/remove-k-digits/1)
