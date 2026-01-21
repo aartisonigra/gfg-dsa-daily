@@ -373,3 +373,5 @@ https://www.geeksforgeeks.org/problems/minimum-deletitions1648/1
 |2025-01-19 | (https://www.geeksforgeeks.org/problems/remove-k-digits/1)
 
 |2025-01-20 | (https://www.geeksforgeeks.org/problems/implement-undo-redo/1)
+
+|2025-01-21 | (https://www.geeksforgeeks.org/problems/stock-span-problem-1587115621/1)
