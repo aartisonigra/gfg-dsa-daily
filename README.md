@@ -377,3 +377,5 @@ https://www.geeksforgeeks.org/problems/minimum-deletitions1648/1
 |2025-01-21 | (https://www.geeksforgeeks.org/problems/stock-span-problem-1587115621/1)
 
 |2025-01-22 | (https://www.geeksforgeeks.org/problems/sum-of-subarray-ranges/1)
+
+|2025-01-23 | (https://www.geeksforgeeks.org/problems/maximum-people-visible-in-a-line/1)
