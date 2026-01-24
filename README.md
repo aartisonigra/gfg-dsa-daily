@@ -379,3 +379,5 @@ https://www.geeksforgeeks.org/problems/minimum-deletitions1648/1
 |2025-01-22 | (https://www.geeksforgeeks.org/problems/sum-of-subarray-ranges/1)
 
 |2025-01-23 | (https://www.geeksforgeeks.org/problems/maximum-people-visible-in-a-line/1)
+
+|2025-01-24 | (https://www.geeksforgeeks.org/problems/josephus-problem/1)
