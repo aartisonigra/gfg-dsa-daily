@@ -381,3 +381,5 @@ https://www.geeksforgeeks.org/problems/minimum-deletitions1648/1
 |2025-01-23 | (https://www.geeksforgeeks.org/problems/maximum-people-visible-in-a-line/1)
 
 |2025-01-24 | (https://www.geeksforgeeks.org/problems/josephus-problem/1)
+
+|2025-01-25 | (https://www.geeksforgeeks.org/problems/valid-number-of-parenthesis/1)
