@@ -385,3 +385,5 @@ https://www.geeksforgeeks.org/problems/minimum-deletitions1648/1
 |2025-01-25 | (https://www.geeksforgeeks.org/problems/valid-number-of-parenthesis/1)
 
 |2025-01-26 | (https://www.geeksforgeeks.org/problems/generate-permutations-of-an-array/1)
+
+|2025-01-28 | (https://www.geeksforgeeks.org/problems/count-the-subset-with-sum-equal-to-k/1)
