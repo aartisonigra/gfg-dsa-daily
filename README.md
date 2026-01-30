@@ -389,3 +389,5 @@ https://www.geeksforgeeks.org/problems/minimum-deletitions1648/1
 |2025-01-28 | (https://www.geeksforgeeks.org/problems/count-the-subset-with-sum-equal-to-k/1)
 
 |2025-01-29 | (https://www.geeksforgeeks.org/problems/first-non-repeating-character-in-a-stream1216/1)
+
+|2025-01-30 | (http://geeksforgeeks.org/problems/interleave-the-first-half-of-the-queue-with-second-half/1)
