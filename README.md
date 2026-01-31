@@ -391,3 +391,5 @@ https://www.geeksforgeeks.org/problems/minimum-deletitions1648/1
 |2025-01-29 | (https://www.geeksforgeeks.org/problems/first-non-repeating-character-in-a-stream1216/1)
 
 |2025-01-30 | (http://geeksforgeeks.org/problems/interleave-the-first-half-of-the-queue-with-second-half/1)
+
+|2025-01-31 | (https://www.geeksforgeeks.org/problems/implement-k-queues-in-a-single-array/1)
