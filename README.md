@@ -393,3 +393,5 @@ https://www.geeksforgeeks.org/problems/minimum-deletitions1648/1
 |2025-01-30 | (http://geeksforgeeks.org/problems/interleave-the-first-half-of-the-queue-with-second-half/1)
 
 |2025-01-31 | (https://www.geeksforgeeks.org/problems/implement-k-queues-in-a-single-array/1)
+
+|2025-02-01 | (https://www.geeksforgeeks.org/problems/maximum-of-all-subarrays-of-size-k3101/1)
