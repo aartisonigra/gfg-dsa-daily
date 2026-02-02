@@ -395,3 +395,5 @@ https://www.geeksforgeeks.org/problems/minimum-deletitions1648/1
 |2025-01-31 | (https://www.geeksforgeeks.org/problems/implement-k-queues-in-a-single-array/1)
 
 |2025-02-01 | (https://www.geeksforgeeks.org/problems/maximum-of-all-subarrays-of-size-k3101/1)
+
+|2025-02-02 | (https://www.geeksforgeeks.org/problems/max-circular-subarray-sum-1587115620/1)
