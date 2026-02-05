@@ -399,3 +399,5 @@ https://www.geeksforgeeks.org/problems/minimum-deletitions1648/1
 |2025-02-02 | (https://www.geeksforgeeks.org/problems/max-circular-subarray-sum-1587115620/1)
 
 |2025-02-04 | (https://www.geeksforgeeks.org/problems/last-moment-before-all-ants-fall-out-of-a-plank/1)
+
+|2025-02-05 | (https://www.geeksforgeeks.org/problems/maximize-number-of-1s0905/1)
