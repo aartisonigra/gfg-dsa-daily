@@ -403,3 +403,5 @@ https://www.geeksforgeeks.org/problems/minimum-deletitions1648/1
 |2025-02-05 | (https://www.geeksforgeeks.org/problems/maximize-number-of-1s0905/1)
 
 |2025-02-06 | (https://www.geeksforgeeks.org/problems/happiest-triplet2921/1)
+
+|2025-02-07 | (https://www.geeksforgeeks.org/problems/max-sum-in-the-configuration/1)
