@@ -405,3 +405,5 @@ https://www.geeksforgeeks.org/problems/minimum-deletitions1648/1
 |2025-02-06 | (https://www.geeksforgeeks.org/problems/happiest-triplet2921/1)
 
 |2025-02-07 | (https://www.geeksforgeeks.org/problems/max-sum-in-the-configuration/1)
+
+|2025-02-09 | (https://www.geeksforgeeks.org/problems/rotation4723/1)
