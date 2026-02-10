@@ -407,3 +407,5 @@ https://www.geeksforgeeks.org/problems/minimum-deletitions1648/1
 |2025-02-07 | (https://www.geeksforgeeks.org/problems/max-sum-in-the-configuration/1)
 
 |2025-02-09 | (https://www.geeksforgeeks.org/problems/rotation4723/1)
+
+|2025-02-10 | (https://www.geeksforgeeks.org/problems/koko-eating-bananas/1)
