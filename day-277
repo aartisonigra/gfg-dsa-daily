@@ -1,0 +1,57 @@
+Given a garden with n flowers planted in a row, that is represented by an array arr[], where arr[i] denotes the height of the ith flower.You will water them for k days. In one day you can water w continuous flowers. Whenever you water a flower its height increases by 1 unit. You have to maximize the minimum height of all flowers after  k days of watering.
+
+Examples:
+
+Input: arr[] = [2, 3, 4, 5, 1], k = 2, w = 2
+Output: 2
+Explanation: The minimum height after watering is 2.
+Day 1: Water the last two flowers -> arr becomes [2, 3, 4, 6, 2]
+Day 2: Water the last two flowers -> arr becomes [2, 3, 4, 7, 3]
+Input: arr[] = [5, 8], k = 5, w = 1
+Output: 9
+Explanation: The minimum height after watering is 9.
+Day 1 - Day 4: Water the first flower -> arr becomes [9, 8]
+Day 5: Water the second flower -> arr becomes [9, 9]
+
+  SOLUTIONS:
+
+class Solution {
+    public int maxMinHeight(int[] arr, int k, int w) {
+        int n = arr.length;
+        int low = 0, high = (int)1e9, ans = 0;
+
+        while (low <= high) {
+            int mid = low + (high - low) / 2;
+            if (canReachMinHeight(arr, n, k, w, mid)) {
+                ans = mid; // this mid is possible, try higher
+                low = mid + 1;
+            } else {
+                high = mid - 1; // not possible, try lower
+            }
+        }
+        return ans;
+    }
+
+    private boolean canReachMinHeight(int[] arr, int n, int k, int w, int targetHeight) {
+        int[] water = new int[n + 1]; // difference array
+        int totalWater = 0;
+        int add = 0; // current water added up to i
+
+        for (int i = 0; i < n; i++) {
+            add += water[i];
+            int currentHeight = arr[i] + add;
+
+            if (currentHeight < targetHeight) {
+                int diff = targetHeight - currentHeight;
+                totalWater += diff;
+                if (totalWater > k) return false;
+
+                add += diff;
+                if (i + w < n) {
+                    water[i + w] -= diff;
+                }
+            }
+        }
+        return true;
+    }
+}
