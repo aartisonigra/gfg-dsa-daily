@@ -1,0 +1,53 @@
+Given a positive number n and a number d. Find the count of positive numbers smaller or equal to n such that the difference between the number and sum of its digits is greater than or equal to given specific value d.
+
+Examples:
+
+Input: n = 13, d = 2
+Output: 4
+Explanation:
+There are 4 numbers satisfying the
+Conditions. These are 10, 11, 12 and 13.
+Input: n = 14, d = 3
+Output: 5
+Explanation:
+There are 5 numbers satisfying the
+Conditions. These are 10, 11, 12, 13 and 14.
+
+
+  SOLUTIONS:
+
+class Solution {
+    
+    // Function to calculate sum of digits
+    private int sumOfDigits(long num) {
+        int sum = 0;
+        while (num > 0) {
+            sum += num % 10;
+            num /= 10;
+        }
+        return sum;
+    }
+    
+    public int getCount(int n, int d) {
+        
+        long low = 1, high = n;
+        long ans = -1;
+        
+        while (low <= high) {
+            long mid = low + (high - low) / 2;
+            
+            long value = mid - sumOfDigits(mid);
+            
+            if (value >= d) {
+                ans = mid;
+                high = mid - 1;  // try smaller number
+            } else {
+                low = mid + 1;
+            }
+        }
+        
+        if (ans == -1) return 0;
+        
+        return (int)(n - ans + 1);
+    }
+}
