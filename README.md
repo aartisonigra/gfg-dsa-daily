@@ -413,3 +413,5 @@ https://www.geeksforgeeks.org/problems/minimum-deletitions1648/1
 |2025-02-11 | (https://www.geeksforgeeks.org/problems/equalize-the-towers2804/1)
 
 |2025-02-12 | (https://www.geeksforgeeks.org/problems/max-min-height--170647/1)
+
+|2025-02-13 | (https://www.geeksforgeeks.org/problems/all-numbers-with-specific-difference3558/1)
