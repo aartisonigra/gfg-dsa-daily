@@ -1,0 +1,70 @@
+Given an array arr[] where each element denotes the length of a board, and an integer k representing the number of painters available. Each painter takes 1 unit of time to paint 1 unit length of a board.
+
+Determine the minimum amount of time required to paint all the boards, under the constraint that each painter can paint only a contiguous sequence of boards (no skipping or splitting allowed).
+
+Examples:
+
+Input: arr[] = [5, 10, 30, 20, 15], k = 3
+Output: 35
+Explanation: The optimal allocation of boards among 3 painters is - 
+Painter 1 → [5, 10] → time = 15
+Painter 2 → [30] → time = 30
+Painter 3 → [20, 15] → time = 35
+Job will be done when all painters finish i.e. at time = max(15, 30, 35) = 35
+Input: arr[] = [10, 20, 30, 40], k = 2
+Output: 60
+Explanation: A valid optimal partition is - 
+Painter 1 → [10, 20, 30] → time = 60
+Painter 2 → [40] → time = 40
+Job will be complete at time = max(60, 40) = 60
+Input: arr[] = [100, 200, 300, 400], k = 1
+Output: 1000
+Explanation: There is only one painter, so the painter must paint all boards sequentially. The total time taken will be the sum of all board lengths, i.e., 100 + 200 + 300 + 400 = 1000.
+
+  SOLUTIONS:
+
+class Solution {
+    public int minTime(int[] arr, int k) {
+        int n = arr.length;
+        
+        int low = 0, high = 0;
+        for(int i = 0; i < n; i++) {
+            low = Math.max(low, arr[i]); // max single board length
+            high += arr[i];              // sum of all boards
+        }
+        
+        int result = high;
+        
+        while(low <= high) {
+            int mid = low + (high - low) / 2;
+            
+            if(isPossible(arr, k, mid)) {
+                result = mid;      // possible to paint in mid time
+                high = mid - 1;    // try to find smaller time
+            } else {
+                low = mid + 1;     // need more time
+            }
+        }
+        
+        return result;
+    }
+    
+    // Check if boards can be painted by k painters in maxTime
+    private boolean isPossible(int[] arr, int k, int maxTime) {
+        int painters = 1;
+        int currTime = 0;
+        
+        for(int length : arr) {
+            if(currTime + length <= maxTime) {
+                currTime += length;
+            } else {
+                painters++;
+                currTime = length;
+                
+                if(painters > k) return false;
+            }
+        }
+        
+        return true;
+    }
+}
