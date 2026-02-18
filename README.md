@@ -421,3 +421,5 @@ https://www.geeksforgeeks.org/problems/minimum-deletitions1648/1
 |2025-02-15 | (https://www.geeksforgeeks.org/problems/chocolate-distribution-problem3825/1)
 
 |2025-02-17 | (https://www.geeksforgeeks.org/problems/intersecting-intervals/1)
+
+|2025-02-18 | (https://www.geeksforgeeks.org/problems/inversion-of-array-1587115620/1)
