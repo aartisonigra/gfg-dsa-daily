@@ -427,3 +427,5 @@ https://www.geeksforgeeks.org/problems/minimum-deletitions1648/1
 |2025-02-19 | (https://www.geeksforgeeks.org/problems/missing-element-in-range/1)
 
 |2025-02-20 | (https://www.geeksforgeeks.org/problems/largest-number-formed-from-an-array1117/1)
+
+|2025-02-21 | (https://www.geeksforgeeks.org/problems/find-h-index--165609/1)
