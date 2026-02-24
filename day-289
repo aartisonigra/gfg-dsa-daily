@@ -1,0 +1,47 @@
+Given two binary arrays, a1[] and a2[] of equal length. Find the length of longest common span (i, j), where i<= j such that a1[i] + a1[i+1] + .... + a1[j] =  a2[i] + a2[i+1] + ... + a2[j].
+
+Examples:
+
+Input: a1[] = [0, 1, 0, 0, 0, 0], a2[] = [1, 0, 1, 0, 0, 1]
+Output: 4
+Explanation: The longest span with same sum is from index 1 to 4 (0-based indexing).
+Input: a1[] = [0, 1, 0, 1, 1, 1, 1], a2[] = [1, 1, 1, 1, 1, 0, 1]
+Output: 6
+Explanation: The longest span with same sum is from index 1 to 6 (0-based indexing).
+Input: a1[] = [0, 0, 0], a2[] = [1, 1, 1]
+Output: 0
+Explanation: There is no span where the sum of the elements in a1[] and a2[] is equal.
+
+  SOLUTIONS:
+
+
+  class Solution {
+    equalSumSpan(a1, a2) {
+        let n = a1.length;
+        
+        let map = new Map();   // prefixSum -> first index
+        let prefixSum = 0;
+        let maxLen = 0;
+        
+        for (let i = 0; i < n; i++) {
+            // difference add karo
+            prefixSum += (a1[i] - a2[i]);
+            
+            // jo prefixSum 0 hoy
+            if (prefixSum === 0) {
+                maxLen = i + 1;
+            }
+            
+            // jo aa prefixSum pehla joi chhe
+            if (map.has(prefixSum)) {
+                let prevIndex = map.get(prefixSum);
+                maxLen = Math.max(maxLen, i - prevIndex);
+            } else {
+                // first time store karo
+                map.set(prefixSum, i);
+            }
+        }
+        
+        return maxLen;
+    }
+}
